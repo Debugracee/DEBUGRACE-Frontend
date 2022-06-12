@@ -1,10 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <%- include('partials/head') %> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Debugrace - Página inicial </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b9c1a80e37.js" crossorigin="anonymous"></script>
+    <link href="css/home.css" rel="stylesheet"> 
 </head>
+
 <body>
-    <h1> debugrace </h1>
+<header class="container-fluid cabecalho"> <!-- header--> <!-- nao exclui o "container fluid"-->
+    <a href="/pagina-inicial"> <img class="imagem-cabecalho" src = "svg/logo.svg" alt="Logo debugrace"></a>  <!--o alt é pra aparecer algo caso a foto não carregue-->
+        <nav class="cabecalho-menu-item">
+            <a class="cabecalho-menu-item"> Blog</a>
+                <a class="cabecalho-menu-item">Quem somos</a>
+                    <a id="Guia" class="cabecalho-menu-item" href="/guia-estudos">Guia de estudos</a>
+                        <a href="/cadastro" class="cabecalho-menu-item">Criar conta</a>
+                             <a href="/login" class="cabecalho-menu-item">Entrar</a>
+    </nav>
+</header>
+
+
+
+<main class="content"> <!-- Gaby essa é sua parte -->
+   
+    <!-- fiz alterações nessa parte-->
     
+    <section class="container-fluid second-cabecalho"> <!-- nao exclui o "container fluid"-->
+        <div class="text-second-cabecalho">
+            <img class="imagem-cab2" src = "svg/header.svg" alt="Comece a programar agora"> 
+        <p class="paragraph-second-cabecalho"> Te ajudamos a aprender programação do zero, fazendo com que você crie autonomia nos estudos, o que é muito importante na área da tecnologia. </p>
+        </div>
+       <img class="second-cabecalho-imagem" src="svg/menina.svg">
+    </section> <!-- até aqui -->
+
+    
+    <!-- Julio essa é a sua parte -->
+    <section class="container-fluid p-5">
+        <div class="text-center">
+            <h5 class="text-center-item">
+                <strong>ALGUNS DOS NOSSOS CURSOS</strong>
+            </h5>
+        </div>
+    </section>
+        <!-- fazer um slide de img -->
+
+    <div class="justify-content-around container-fluid container-cursos content-cursos"> 
+        <script src="js/home.js"></script>
+        <!--Card unico dos guias-->
+        <section id="listaGuias" class="row" >
+            <div class="col guias cards">
+              <div class="row card produto cartao" style="background-color: #F4F8FF;">
+                <img id="javascript" src="" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title title-body-javascript"></h5>
+                  <p class="card-text paragaph-body-javascript">
+                    <br/>
+                    <span class="badge bg-success"></span>
+                  </p>
+                  <button class="btn-javascript btn-footer-javascript" type="button">Detalhes</button>
+                </div>
+              </div>
+            </div>
+        </section>
+    </div>
+
+            <div class="more-options-cursos"> 
+                <a href="/guia-estudos"> Ver Mais<i class="fa-solid fa-angles-right"></i></a>
+            </div>
+        </div> 
+        <!--FIM-->
+
+    <!-- Julio parte 2 -->
+    <section class="container-fluid p-5">
+        <img class="imagem-comofuncionamos" src = "svg/ComoFunciona.svg" alt="como funcionamos"> 
+    
+        <div class="container-fluid mt-5">
+            <div class="p-1 box-o">
+            <div class="box-blue-o"> 
+        <h5 class="box-blue-o-title"> Estude no seu tempo </h5>
+        <p class="box-blue-o-paragaph"> Ajudamos você a se organizar nos estudos para não ficar perdido com tanto conteúdo gratuito que iremos compartilhar. </p> 
+    </div>
+        <div class="box-red-t"> 
+            <h5 class="box-red-t-title"> Guia de estudos </h5>
+            <p class="box-red-t-paragaph"> Ele servirá para dar um norte para as pessoas que não sabem por onde começar, além disso te ajudaremos a seguir nessa jornada de aprendizado de forma autodidata. </p>
+    </div>
+    </div>
+    <div class="d-flex box-t flex-wrap p-1 mt-4">
+        <div class="box-red-tt"> 
+         <h5 class="box-red-tt-title"> Tudo em um só lugar </h5>
+            <p class="box-red-tt-paragaph"> Com tanto conteúdo gratuito na internet é normal ficar perdido, o debugrace é exatamente o que você precisa para organizar seus estudos </p>
+        </div>
+            <div class="box-blue-f"> 
+                <h5 class="box-blue-f-title"> Blog </h5>
+                    <p class="box-blue-f-paragaph"> Ele servirá para dar um norte para as pessoas que não sabem por onde começar, além disso te ajudaremos a seguir nessa jornada de aprendizado de forma autodidata. </p>
+                    </div>
+                </div>
+            </div>
+</section> <!-- até aqui -->    
+
+
+
+    <!-- Isaque essa é a sua parte -->
+    <section class="container-fluid p-5"> <!-- no exclui o "container fluid"-->
+        
+        <div class="caixa-recursos">
+    <img class="imagem-recursos" src="svg/recursos.svg" alt="RECURSOS">
+</div>
+    <div class="caixa container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <h5 class="paragrafo-1">
+                        "Esse é o site que queriamos que tivesse quando começamos a estudar por conta própria.
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="bloco1">
+                    <p class="paragrafo-2">
+                        Conteúdos de
+                        introdução e
+                        apronfundamento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="imagem-fon col">
+                        <img class="imagem" src="img/Captura de Tela 2022-04-25 às 14.59.10.png">
+                    </div>
+
+                    <div class="coluna-bloco-vermelho col">
+                        <div class="bloco2">
+                            <p class="paragrafo-3">
+                                Exercícios e projetos para praticar
+                                e colocar no seu portifólio.</p>
+                        </div>
+                    </div>
+
+                    <div class="paragrafo-final">
+                        <p class="conjunto-paragrafo-final">
+                            Existem muitos recursos por aí, mas alguns são melhores que outros. Você não precisa
+                            de
+                            mais uma lista de “200+ Cursos Online Gratuitos”.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+    <div>
+
+
+
+    </section> <!-- até aqui -->
+</main>
+    
+<!-- Nicolly essa é a sua parte -->
+<footer>
+    <div class="content-footer">
+    <div class="conceito">
+        <h6>
+                a debugrace é uma organização sem fins lucrativos com um único objetivo de ajudar as pessoas
+                a entrar no mundo da tecnologia de forma totalmente gratuita, compartilhando varios recursos 
+                de qualidade que são disponibilizados na internet sem que necessite gastar para poder aprender, 
+                como livros, bootcamps ou cursos, por exemplo, ajudando-as a se tornarem autodidatas e deixando-a 
+                livre para estudar da sua maneira e no seu tempo.
+        </h6>
+    </div>
+    <div class="socialmedia">
+        <h5 class="socialmedia-h5">
+            Redes Sociais
+        </h5>
+        <ul>
+            <li>
+                <a href="https://web.facebook.com/home.php">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i> 
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-twitter"></i> 
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/feed/">
+                    <i class="fa-brands fa-linkedin-in"></i> 
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="copyright">
+            <h6>&copy debugrace 2022</h6>
+    </div>  
+</div>
+
+    <div class="palavrinhas">
+            <h4>de.bu.gar</h4>
+                <h5>"A arte de remover os bugs de um sistema"</h5>
+            <h4>pro.gra.mar</h4>
+                <h5>"A arte de criar os bugs de um sistema"</h5>
+    </div>
+</footer>
 </body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

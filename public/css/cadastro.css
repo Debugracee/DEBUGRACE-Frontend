@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+
+body{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+.cabecalho{
+    background-color: #1C256D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+}
+
+.cabecalho-menu-item {
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+    color: #FFF2E7;
+    font-weight: 250px;
+    font-size: 19px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.cabecalho-menu-item:hover{
+    color: #7b86de;
+}
+
+.cabecalho-menu-item {
+    display: flex;
+    gap: 40px;
+}  
+
+.imagem-cabecalho{
+    width: 230px;
+    height: 40px;
+    vertical-align: top;
+    padding: 7px 0px 4px 13px; 
+}
+form{
+    
+    box-sizing: border-box;
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+
+}
+.container{
+
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px darkgray;
+    background-color: #E9F0FF;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+.container-top{
+
+    text-align: center;
+
+}
+.container-top p{
+
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+
+}
+.container-top h2{
+
+    font-family: 'Courier Prime', monospace;
+    font-size: 30px;
+    color: #D44A4A;
+
+}
+
+.form-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-container input {
+    border-radius: 10px;
+    outline: 0;
+    width: 100%;
+    height: 30px;
+    padding: 17px;
+    display: block;
+
+}
+
+.form-container label {
+    width: 50%;
+    color:rgb(36, 36, 36);
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 2%;
+
+}
+
+.form-container small {
+    position: absolute;
+    visibility: hidden;
+}
+
+.remember-password{
+
+    display: flex;
+    margin-top: 22px ;
+    text-align: start;
+    width: 50%;
+
+}
+.container-button{
+
+    border-radius: 10px;
+    outline: 0;
+    border: none;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 25px;
+
+}
+.return-to-login{
+
+    float: right;
+
+}
+.return-to-login a{
+
+    text-decoration: none;
+    color: #1C256D;
+
+}
+.container-button button{
+
+    background-color: #D44A4A;
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+    outline: none;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.form-container.error input {
+    border-color: #D44A4A;
+    
+
+}
+
+.form-container.error small {
+    visibility: visible;
+    color: #D44A4A
+}
+
+.form-container.success input {
+    border-color: #1C256D;
+
+}
+
+/* .container-name-group.error input {
+    border-color: red;
+
+}
+
+.container-name-group.error small {
+    visibility: visible;
+    color: red
+}
+
+ .container-name-group.success input {
+    border-color: #2ecc71;
+}
+
+.container-gender-group.error input {
+    border-color: red;
+}
+
+.container-gender-group.error small {
+    visibility: hidden;
+    color: red;
+
+}
+
+.container-gender-group.success input {
+    border-color: #2ecc71;
+
+}
+
+.container-createpassword-group.error input {
+    border-color: red;
+}
+
+.container-createpassword-group.error small {
+    visibility: visible;
+    color: red
+}
+
+.container-createpassword-group.success input {
+    border-color: #2ecc71;
+
+} */
+
+footer {
+
+    background-color: #1C256D;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    width: 100%;
+    height: auto;
+
+}
+.conceito {
+
+    color: #FFFFFF;
+    width: 35%;
+    text-align: start;
+    float: left;
+    margin-left: 45px; 
+    font-family: Cairo;
+
+}
+.palavrinhas {
+
+    color: #a8abab;
+    width: 42%;
+    text-align: right;
+    float: right;
+    margin-right: 95px;
+    height: auto;
+
+}
+.palavrinhas h4 {
+    color: #4600DA;
+    text-align: start;
+    font-family: 'Courier Prime';
+}
+.palavrinhas h5 {
+    color:#a8abab;
+    text-align: end;
+    font-family: Cairo;
+}
+.socialmedia {
+
+    color: #FFFFFF;
+    width: 95%;
+    text-align: left;
+    float: left;
+    margin-left: 35px;
+    padding-top: 2%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    height: auto;
+
+}
+.socialmedia-h5{
+
+    margin-left: 10px;
+    font-family: Verdana;
+    font-style: bold;
+
+}
+.socialmedia ul {
+
+    display: flex;
+
+}
+.socialmedia li {
+
+    list-style-type: none;
+    padding-right: 2%;
+
+}
+.copyright {
+
+    color:#c4c6c6;
+    width: 90%;
+    padding-top: 10%;
+    margin-left: 45px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Courier Prime';
+    height: auto;
+
+}
+@media only screen and (max-width: 1255px) {
+    .copyright {
+        padding-top: 5%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        padding: 5%;
+    }
+    footer {
+        width: 100%;
+    }
+    .conceito{
+        display: flex;
+        margin-left: 5%;
+    }
+    .palavrinhas {
+        margin-right: 3%;
+    }
+    .socialmedia {
+        text-align: center;
+        margin: 0;
+    }
+    .socialmedia ul {
+        justify-content: center;
+    }
+
+}
+@media only screen and (max-width: 670px) {
+    form {
+        height: auto;
+    }
+    .conceito {
+        width: 48%;
+        text-align: justify;
+    }
+    .palavrinhas {
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 476px) {
+    body {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        padding: 5%;
+    }
+    footer {
+        width: 100%;
+    }
+    .conceito {
+        width: 90%;
+        height: auto;
+        text-align: justify;
+        margin: 0;
+        padding-left: 6%;
+        padding-right: 0%;
+    }
+    .palavrinhas {
+        display: none;
+    }
+    .socialmedia {
+        text-align: center;
+        margin: 0;
+    }
+    .socialmedia ul {
+        justify-content: center;
+        margin: 0;
+    }
+
+}
+@media only screen and (max-width: 376px) {
+    * {
+        font-size: small;
+    }
+    body{
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        padding: 5%;
+    }    
+    footer {
+        width: 100%;   
+    }
+}
+@media only screen and (max-width: 320px) {
+    * {
+
+    }
+}
