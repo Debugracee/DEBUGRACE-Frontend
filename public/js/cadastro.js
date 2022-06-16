@@ -1,3 +1,4 @@
+
 console.log('JavaScript Carregado')
 
 const form = document.getElementById('form');
@@ -7,11 +8,28 @@ const gender = document.getElementById('gender')
 const password = document.getElementById('password')
 const button = document.getElementById('check')
 
+function registerUsers() {
+    
+    let newUser = {
+        nomeCompleto: nome.value.trim(),
+        email: email.value.trim(),
+        // nascimento: '09/03/2006',
+        genero: gender.value.trim()
+    }
+
+    fetch('http://localhost:3500/usuario', {
+        method: "POST",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify(newUser)
+    })
+    .then(response => console.log (response));
+};
 
 
- form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault()
     validationInputs()
+    registerUsers()
     console.log('clicou')
 });
 
