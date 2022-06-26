@@ -11,30 +11,17 @@
 </head>
 
 <body>
-<header class="container-fluid cabecalho"> <!-- header--> <!-- nao exclui o "container fluid"-->
-    <a href="/pagina-inicial"> <img class="imagem-cabecalho" src = "svg/logo.svg" alt="Logo debugrace"></a>  <!--o alt é pra aparecer algo caso a foto não carregue-->
-        <nav class="cabecalho-menu-item">
-            <a class="cabecalho-menu-item"> Blog</a>
-                <a class="cabecalho-menu-item">Quem somos</a>
-                    <a id="Guia" class="cabecalho-menu-item" href="/guia-estudos">Guia de estudos</a>
-                        <a href="/cadastro" class="cabecalho-menu-item">Criar conta</a>
-                             <a href="/login" class="cabecalho-menu-item">Entrar</a>
-    </nav>
-</header>
 
-
-
-<main class="content"> <!-- Gaby essa é sua parte -->
-   
-    <!-- fiz alterações nessa parte-->
+    <%- include('./partials/header')%>
     
-    <section class="container-fluid second-cabecalho"> <!-- nao exclui o "container fluid"-->
+<main class="content">
+    <section class="container-fluid second-cabecalho">
         <div class="text-second-cabecalho">
             <img class="imagem-cab2" src = "svg/header.svg" alt="Comece a programar agora"> 
         <p class="paragraph-second-cabecalho"> Te ajudamos a aprender programação do zero, fazendo com que você crie autonomia nos estudos, o que é muito importante na área da tecnologia. </p>
         </div>
        <img class="second-cabecalho-imagem" src="svg/menina.svg">
-    </section> <!-- até aqui -->
+    </section>
 
     
     <!-- Julio essa é a sua parte -->
@@ -104,7 +91,7 @@
 
 
     <!-- Isaque essa é a sua parte -->
-    <section class="container-fluid p-5"> <!-- no exclui o "container fluid"-->
+    <section class="container-fluid p-5">
         
         <div class="caixa-recursos">
     <img class="imagem-recursos" src="svg/recursos.svg" alt="RECURSOS">
@@ -161,66 +148,9 @@
     </div>
     </div>
     <div>
-
-
-
-    </section> <!-- até aqui -->
+    </section>
 </main>
-    
-<!-- Nicolly essa é a sua parte -->
-<footer>
-    <div class="content-footer">
-    <div class="conceito">
-        <h6>
-                a debugrace é uma organização sem fins lucrativos com um único objetivo de ajudar as pessoas
-                a entrar no mundo da tecnologia de forma totalmente gratuita, compartilhando varios recursos 
-                de qualidade que são disponibilizados na internet sem que necessite gastar para poder aprender, 
-                como livros, bootcamps ou cursos, por exemplo, ajudando-as a se tornarem autodidatas e deixando-a 
-                livre para estudar da sua maneira e no seu tempo.
-        </h6>
-    </div>
-    <div class="socialmedia">
-        <h5 class="socialmedia-h5">
-            Redes Sociais
-        </h5>
-        <ul>
-            <li>
-                <a href="https://web.facebook.com/home.php">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/">
-                    <i class="fa-brands fa-instagram"></i> 
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/home">
-                    <i class="fa-brands fa-twitter"></i> 
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/feed/">
-                    <i class="fa-brands fa-linkedin-in"></i> 
-                </a>
-            </li>
-        </ul>
-    </div>
-
-
-    <div class="copyright">
-            <h6>&copy debugrace 2022</h6>
-    </div>  
-</div>
-
-    <div class="palavrinhas">
-            <h4>de.bu.gar</h4>
-                <h5>"A arte de remover os bugs de um sistema"</h5>
-            <h4>pro.gra.mar</h4>
-                <h5>"A arte de criar os bugs de um sistema"</h5>
-    </div>
-</footer>
+<%- include('./partials/footer')%>
 </body>
-<!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
