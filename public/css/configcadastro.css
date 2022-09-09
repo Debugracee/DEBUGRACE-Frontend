@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+
+body {
+
+    background-color: #E9F0FF;
+    right: 0;
+
+}
+header {
+
+    width: 100%;
+    padding: 1%;
+    display: inline-block;
+    background-color: #1C256D;
+    color: #FFFFFF;
+
+}
+/*
+.container{
+
+    border: solid;
+
+}
+*/
+.col{
+
+    margin: 0;
+
+}
+.config {
+
+    text-decoration: none;
+
+}
+.titulo {
+
+    height: 25px;
+    padding-left: 41%;
+    text-align: start;
+
+}
+.text{
+
+    text-align: center;
+    padding-top: 10%;
+
+}
+.user {
+
+    text-decoration: none;
+    margin: 0;
+    padding-left: 20%;
+
+}
+header h1 {
+
+    padding-left: 4%;
+
+}
+.configlogo {
+
+    padding-left: 20%;
+    height: 200px;
+    justify-content: right;
+
+}
+form {
+
+    width: 65%;
+    margin-left: 25%;
+    font-family: Cairo;;
+    margin-bottom: 3%;
+
+}
+form label{
+
+    color: #0D0C61;
+    position: absolute;
+
+}
+form input {
+
+    background-color: #ced8eb;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    width: 550px;
+    height: 45px;
+
+}
+.editar {
+
+    cursor: pointer;
+    width: 15%;
+    height: 45px;
+    border-radius: 5px;
+    color:#FFFFFF;
+    background-color: #1C256D;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 25px;
+
+}
+form small {
+
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+
+}
+.confirma{
+
+    padding: 0%;
+
+}
+.check-button {
+
+    cursor: pointer;
+    width: 35%;
+    height: 65px;
+    border-radius: 10px;
+    color:#FFFFFF;
+    background-color: #D44A4A;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.delete {
+
+    width: 55%;
+    height: 65px;
+    padding: 2%;
+    color: #0D0C61;
+    text-decoration: none;
+
+}
+@media only screen and (max-width: 1255px) {
+    header{
+        width: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+    .titulo{
+        padding-left: 31%;
+    }
+    .text{
+        width: 85%;
+    }
+    .configlogo{
+        padding-left: 15%;
+        height: 150px;
+    }
+    form{
+        width: 80%;
+        margin-right: 25%;
+        margin: 0 15%;
+    }
+    form input{
+        width: 450px;
+    }
+    .editar{
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 670px) {
+    header{
+        width: 100%;
+    }
+    .text{
+        width: 85%;
+        height: 35px;
+        text-align: start;
+    }
+    form{
+        width: 85%;
+        margin-right: 20%;
+    }
+    form input{
+        width: 350px;
+    }
+    .editar{
+        width: 25%;
+    }
+    .check-button{
+        width: 45%;
+    }
+    .delete{
+        width: 65%;
+        height: 75px;
+    }
+}
+@media only screen and (max-width: 476px) {
+    header{
+        width: 100%;
+    }
+    .titulo{
+        padding-left: 15%;
+        height: 20px;
+    }
+    .user{
+        padding: 0;
+    }
+    .text{
+        width: 75%;
+        height: 15px;
+        text-align: start;
+    }
+    .configlogo{
+        height: 130px;
+    }
+    form{
+        width: 85%;
+        margin-right: 20%;
+        margin: 0 15%;
+    }
+    form input{
+        width: 300px;
+        height: 40px;
+    }
+    .editar{
+        width: 20%;
+        height: 40px;
+    }
+    .check-button{
+        width: 50%;
+        height: 55px;
+    }
+    .delete{
+        width: 65%;
+        height: 75px;
+    }
+}
+@media only screen and (max-width: 376px) {
+    * {
+        font-size: small;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .text{
+        width: 55%;
+        font-size: 135% ;
+        text-align: start;
+    }
+    .configlogo{
+        height: 100px;
+    }
+    form{
+        width: 75%
+    }
+    form input{
+        width: 60%;
+        height: 30px;
+    }
+    .editar{
+        width: 21%;
+        height: 85%;
+    }
+    .check-button{
+        text-align: center;
+    }
+    .delete{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 320px) {
+    header{
+        width: 100%;
+    }
+    form{
+        width: 70%
+    }
+    form input{
+        width: 55%;
+        height: 30px;
+    }
+}
