@@ -21,6 +21,10 @@ app.get("/guia-estudos", (req, res) => {
   res.render("guia-estudos");
 });
 
+app.get("/guia-estudos/ciclo-basico", (req, res) => {
+  res.render("ciclo-basico");
+});
+
 app.get("/novo-post", (req, res) => {
   res.render("createPosts");
 });
