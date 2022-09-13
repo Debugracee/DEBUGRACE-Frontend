@@ -30,10 +30,7 @@ function registerUsers() {
     body: JSON.stringify(newUser),
   })
     .then((res) => res.json())
-
-    .then((res) => {
-      console.log(res.id); 
-    });
+    .then((usuario) => console.log(usuario.id));
 }
 
 form.addEventListener("submit", (event) => {

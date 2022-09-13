@@ -100,44 +100,146 @@ header {
 
 .content-page button {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     width: 90vw;
     max-width: 90vw;
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #F9FBFF;
     border: 2px solid #2B3D99;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     padding: 10px;
     height: 8vh;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.content-page button img {
-    width: 250px;
- 
-}
 
-#text {
+.btn-title {
     display: flex;
+    justify-content: space-between;
+    width: 88vw;
+    align-items: center;
+    padding: 7px 0;
+}
+
+.btn-title img {
+    width: 320px;
+}
+
+#text-logicaProgramacao {
+    display: none;
     flex-direction: column;
     width: 70vw;
     align-items: center;
-    border: solid;
+    visibility: hidden;
     padding: 5px;
     margin: 10px;
     
 }
 
-#text p {
+#text-logicaProgramacao p {
     border: solid;
     margin-bottom: 1rem;
     width: 60vw;
     font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
 }
 
-#text a {
+#text-logicaProgramacao a {
     border: solid;
     font-family: 'Cairo', sans-serif;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
 
+}
+
+#btn-logicaProgramacao.active {
+    height: 50vh;
+}
+
+#text-logicaProgramacao.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+#text-dadosEalgoritmo {
+    display: none;
+    flex-direction: column;
+    width: 70vw;
+    align-items: center;
+    visibility: hidden;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+#text-dadosEalgoritmo p {
+    border: solid;
+    margin-bottom: 1rem;
+    width: 60vw;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
+}
+
+#text-dadosEalgoritmo a {
+    border: solid;
+    font-family: 'Cairo', sans-serif;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+
+#btn-dadosEalgoritmo.active {
+    height: 50vh;
+}
+
+#text-dadosEalgoritmo.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+#text-gitEgithub {
+    display: none;
+    flex-direction: column;
+    width: 70vw;
+    visibility: hidden;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+#text-gitEgithub p {
+    border: solid;
+    margin-bottom: 1rem;
+    width: 60vw;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
+}
+
+#text-gitEgithub a {
+    border: solid;
+    font-family: 'Cairo', sans-serif;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+
+#btn-gitEgithub.active {
+    height: 50vh;
+}
+
+#text-gitEgithub.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
 }
