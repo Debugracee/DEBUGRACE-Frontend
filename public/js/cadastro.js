@@ -7,6 +7,7 @@ const date = document.getElementById("date");
 const gender = document.getElementById("gender");
 const password = document.getElementById("password");
 const button = document.getElementById("check");
+// const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 async function pegandoUsuarios() {
   const fetchData = await fetch("http://localhost:3500/usuario");
@@ -15,7 +16,7 @@ async function pegandoUsuarios() {
 
 pegandoUsuarios();
 
-function registerUsers() {
+async function registerUsers() {
   let newUser = {
     nome: nome.value.trim(),
     email: email.value.trim(),
@@ -24,18 +25,21 @@ function registerUsers() {
     senha: password.value.trim(),
   };
 
-  fetch("http://localhost:3500/usuario", {
+  const req = await fetch("http://localhost:3500/usuario", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(newUser),
   })
     .then((res) => res.json())
-    .then((usuario) => console.log(usuario.id));
+    .then((res) => {
+      if (res.usuario.id) {
+        window.location.assign("http://localhost:5000/login");
+      }
+    });
 }
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  // validationInputs();
   registerUsers();
   console.log("clicou");
 });
@@ -43,21 +47,26 @@ form.addEventListener("submit", (event) => {
 nome.addEventListener("keyup", function () {
   if (nome.value.trim() === "") {
     alertError(nome, "Seu nome é obrigatório");
-  } else if (nome.value.length < 10) {
-    alertError(nome, "Digite um nome válido");
   } else {
     alertSuccess(nome);
   }
-  console.log("caracter: " + nome.value);
 });
 
 email.addEventListener("keyup", function () {
   if (email.value.trim() === "") {
     alertError(email, "Seu email é obrigatório");
+  } else if (!checkEmail(email.value.trim())) {
+    alertError(email, "Digite um email valido");
   } else {
     alertSuccess(email);
   }
 });
+
+function checkEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
 
 date.addEventListener("keyup", function () {
   if (date.value.trim() === "") {
@@ -85,51 +94,6 @@ password.addEventListener("keyup", function () {
   }
 });
 
-// agora só falta arrumar o codigo de forma organizada e otimizada. Também criar uma função que gere uma ação depois
-// do submit no form após os inputs obedecerem todas as validações
-
-// function validationInputs() {
-//   //    new Number(value)
-//   const nomeValue = nome.value.trim();
-//   const emailValue = email.value.trim();
-//   const genderValue = gender.value.trim();
-//   const passwordValue = password.value.trim();
-
-//   if (nomeValue === "") {
-//     alertError(nome, "Seu nome é obrigatório");
-//   } else {
-//     alertSuccess(nome);
-//   }
-
-//   if (emailValue === "") {
-//     alertError(email, "Seu email é obrigatório");
-//   } else {
-//     alertSuccess(email);
-//   }
-
-//   if (genderValue === "") {
-//     alertError(gender, "Seu gênero é obrigatório");
-//   } else {
-//     alertSuccess(gender);
-//   }
-
-//   if (passwordValue === "") {
-//     alertError(password, "Sua senha é obrigatória");
-//   } else if (passwordValue.length < 8) {
-//     alertError(password, "Sua senha deve conter no mínimo 8 caracteres");
-//   } else {
-//     alertSuccess(password);
-//   }
-// }
-
-// function inputName() {}
-
-// function inputEmail() {}
-
-// function inputGender() {}
-
-// function inputPassword() {}
-
 function alertError(input, message) {
   const control = input.parentElement;
   const small = control.querySelector("small");
@@ -144,16 +108,4 @@ function alertError(input, message) {
 function alertSuccess(input) {
   const control = input.parentElement;
   control.className = "form-container success";
-
-  //     const formContainer = form.querySelectorAll('form-container')
-
-  // // for(let i = 0; i < formContainer.length; i++) {
-  // //    () => return (control.className = 'form-container success')
-  // // }
-
-  // // const success = control.className = 'form-container success'
-
-  // if(formContainer === success) {
-  //     console.log('muito que bem')
-  // }
 }

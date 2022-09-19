@@ -10,6 +10,8 @@ form.addEventListener("submit", (e) => {
   console.log("clicou");
 });
 
+export const usuario = null;
+
 async function loginUsuario() {
 
   email.addEventListener("keyup", function () {
@@ -35,14 +37,15 @@ async function loginUsuario() {
       senha: password.value.trim()
   }
 
-  const req = await fetch("http://localhost:3500/usuario", {
+  await fetch("http://localhost:3500/login", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(user),
-  });
-
-  const res = req.json();
-  console.log(res);
+  }).then(res => res.json())
+  .then((res) => {
+    usuario = res;
+  })
+  
 }
 
 function alertError(input, message) {
