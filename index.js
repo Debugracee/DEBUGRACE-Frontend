@@ -1,4 +1,5 @@
 const express = require("express");
+// const { usuario } = require("./public/js/login");
 const app = express();
 const port = 5000;
 
@@ -22,8 +23,13 @@ app.get("/guia-estudos", (req, res) => {
 });
 
 app.get("/guia-estudos/ciclo-basico", (req, res) => {
-  res.render("ciclo-basico");
-});
+  res.render('ciclo-basico')
+//   if (usuario.statusLogin === true) {
+//     res.render("ciclo-basico")
+//   } else {
+//   res.render("login");
+//   }
+ });
 
 app.get("/novo-post", (req, res) => {
   res.render("createPosts");

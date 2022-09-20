@@ -1,18 +1,13 @@
-const btnLogicaProgramacao = document.getElementById('btn-logicaProgramacao')
-const textLogicaProgramacao = document.getElementById('text-logicaProgramacao')
-const btnDadosAlgoritmos = document.getElementById('btn-dadosEalgoritmo')
-const textDadosAlgoritmos = document.getElementById('text-dadosEalgoritmo')
-const btnGit = document.getElementById('btn-gitEgithub')
-const textGit = document.getElementById('text-gitEgithub')
+const content = document.getElementById("content");
+const text = document.getElementById("content-text");
 
-function activeLogicaProgramacao() {
-
-    textLogicaProgramacao.classList.toggle('active');
-    btnLogicaProgramacao.classList.toggle('active');
-    console.log('funcionou')
+function activeContent() {
+  text.classList.toggle("active");
+  content.classList.toggle("active");
+  console.log("funcionou");
 }
 
-btnLogicaProgramacao.addEventListener('click', activeLogicaProgramacao);
+content.addEventListener("click", activeContent);
 
 // function activeDadosAlgoritmo() {
 
@@ -33,19 +28,20 @@ btnLogicaProgramacao.addEventListener('click', activeLogicaProgramacao);
 // btnGit.addEventListener('click', activeGit);
 
 fetch("http://localhost:3500/trilhas")
-    .then(res => res.json ())
-    .then(res => { console.log(res)
-       const trilhas = res.trilhas;
-       console.log(trilhas)
-       //enviar(res.usuarios[0].cep)
-       trilhas.map(trilha =>{
-        console.log(trilha)
-        // preciso percorrer todo o elemento do button
-        const getId = document.querySelector('#btn-logicaProgramacao')
-        const p = document.querySelector('#text')
-        p.innerHTML = trilha.descricao
-        // getId.appendChild(p)
-        const a = document.querySelector('#link')
-        a.href = trilha.conteudo
-       })
-    })
+  .then((res) => res.json())
+  .then((res) => {
+    console.log(res);
+    const trilhas = res.trilhas;
+    console.log(trilhas);
+    //enviar(res.usuarios[0].cep)
+    trilhas.map((trilha) => {
+      console.log(trilha);
+      // preciso percorrer todo o elemento do button
+      const getId = document.querySelector("#btn-logicaProgramacao");
+      const p = document.querySelector("#text");
+      p.innerHTML = trilha.descricao;
+      // getId.appendChild(p)
+      const a = document.querySelector("#link");
+      a.href = trilha.conteudo;
+    });
+  });
