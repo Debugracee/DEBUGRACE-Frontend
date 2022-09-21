@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Parte de login*/
+form{
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: #dfe9fb;
+    border: solid 0.2rem #596590;
+    border-radius: 10px;
+    color: #010b4e;
+}
+
+.login{
+    margin-left: 5%;
+    text-align: justify;
+    position: relative;
+}
+.login small {
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.login label {
+    position: absolute;
+}
+.escreva{
+    width:93%;
+    margin-top: 2%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: #ced8eb;
+}
+
+.botao{
+    cursor: pointer;
+    padding: 3%;
+    width:60%;
+    border-radius: 5px;
+    color:#E9F0FF;
+    background-color: #1C256D;
+    border: none;
+}
+
+.botao:hover{
+    color:#dbe6ff;
+    background-color: #010b4e;
+}
+
+.perguntas{
+    font-weight: bold;
+    color: #010b4e;
+}
+
+.perguntas:hover{
+    color: #4b5381;
+}
+/* Error and Success */
+.login.success input {
+    border-color: #2ecc71;
+}
+  
+  .login.error input {
+    border-color: #e74c3c;
+}
+  
+  .login.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+/*parte do rodapé*/
+footer {
+    font-size: 12px;
+    color: #FCFDFF;
+    background-color: #1C256D;
+}
+
+.frases{
+    font-family: 'Cairo', sans-serif;
+    padding-left: 12%;
+}
+
+.texto{
+    font-family: 'Cairo', sans-serif;
+    margin-left: 5%; 
+    text-align: justify;
+}
+
+.h{
+    font-family: 'Cairo', sans-serif;
+    margin-left: 2.5%;  
+    text-align: justify;
+}
+
+.links{
+    margin-left: 40px;
+    font-size: medium;
+
+}
+
+#cop h6{
+    font-family: 'Cairo', sans-serif;
+    margin-left: 2.5%;  
+}
+
+#cop{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+#titulo{
+    color: #D44A4A;
+}
+
+/*tornando ela responsiva*/
+
+@media (min-width: 850px){
+    #seta{
+        display: none;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 850px){
+
+    header{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        background-color: #1c256d;
+        align-items: center;
+    }
+    #voltar{
+        display: none;
+    }
+
+    #logo1{
+        width: 200px;
+    }
+
+    #seta{ 
+        width:80px;
+    }
+
+    .texto{
+        margin-right: 15px;
+    }
+
+    .frases{
+        display: none;
+    }
+
+    form{
+        width: 355px;
+        height: 550px;
+    }
+
+    .h{
+        text-align: center;
+    }  
+
+    #cop{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links{
+        text-align: center;
+        margin-right: 30px;
+    }  
+}
