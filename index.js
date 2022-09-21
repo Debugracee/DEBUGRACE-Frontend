@@ -22,6 +22,10 @@ app.get('/guia-estudos', (req, res) => {
     res.render('guia-estudos')
 });
 
+app.get('/configcadastro', (req, res) => {
+    res.render('configcadastro')
+});
+
 app.listen(port, () => {
     console.log(`Serviço na porta: ${port}`)
     });
