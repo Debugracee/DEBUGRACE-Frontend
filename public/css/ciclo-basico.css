@@ -143,7 +143,7 @@ header {
 
 }
 
-.content-page ul {
+.content {
     display: flex;
     flex-direction: column;
     width: 90vw;
@@ -172,7 +172,7 @@ header {
     width: 320px;
 }
 
-#content-text {
+.content-text {
     display: none;
     flex-direction: column;
     width: 70vw;
@@ -183,7 +183,7 @@ header {
     
 }
 
-#content-text p {
+.content-text p {
     border: solid;
     margin-bottom: 1rem;
     width: 60vw;
@@ -191,7 +191,7 @@ header {
     font-size: 1.2rem;
 }
 
-#content-text a {
+.content-text a {
     border: solid;
     font-family: 'Cairo', sans-serif;
     padding: 5px 5px;
@@ -201,11 +201,11 @@ header {
 
 }
 
-#content.active {
+.content.active {
     height: 50vh;
 }
 
-#content-text.active {
+.content-text.active {
     display: flex;
     flex-direction: column;
     visibility: visible;

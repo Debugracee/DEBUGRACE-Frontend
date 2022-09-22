@@ -1,13 +1,5 @@
-const content = document.getElementById("content");
-const text = document.getElementById("content-text");
-
-function activeContent() {
-  text.classList.toggle("active");
-  content.classList.toggle("active");
-  console.log("funcionou");
-}
-
-content.addEventListener("click", activeContent);
+// const content = document.getElementById("content");
+// const text = document.getElementById("content-text");
 
 // function activeDadosAlgoritmo() {
 
@@ -34,14 +26,49 @@ fetch("http://localhost:3500/trilhas")
     const trilhas = res.trilhas;
     console.log(trilhas);
     //enviar(res.usuarios[0].cep)
-    trilhas.map((trilha) => {
+    trilhas.filter(t => t.trilha === 'ciclo_basico' ).map((trilha) => {
       console.log(trilha);
-      // preciso percorrer todo o elemento do button
-      const getId = document.querySelector("#btn-logicaProgramacao");
-      const p = document.querySelector("#text");
-      p.innerHTML = trilha.descricao;
+      const li = document.createElement("li");
+      li.classList.add('content')
+      const lista = document.getElementById("lista");
+      lista.appendChild(li);
+
+      const img = document.createElement("div");
+      const src = document.createElement("h5");
+      // src.src = "../svg/logicaDeProgramacao.svg";
+      img.appendChild(src);
+      const text = document.createElement("div");
+      text.classList.add("content-text");
+      // const p = document.querySelector("#text");
+      const p = document.createElement("p");
+      // p.innerHTML = trilha.descricao;
       // getId.appendChild(p)
-      const a = document.querySelector("#link");
-      a.href = trilha.conteudo;
+      // const a = document.querySelector("#link");
+      const a = document.createElement("a");
+      a.innerHTML = 'Acessar Conteúdo'
+      // a.href = trilha.conteudo;
+      text.appendChild(p);
+      text.appendChild(a);
+      li.appendChild(img);
+      li.appendChild(text);
+      src.innerHTML = trilha.conteudo;
+      p.innerHTML = trilha.descConteudo;
+      a.href = trilha.linkConteudo;
+
+      function activeContent() {
+        const li = document.querySelector(".content");
+        text.classList.toggle("active");
+        li.classList.toggle("active");
+        console.log("funcionou");
+      }
+
+      li.addEventListener("click", activeContent);
+      // preciso percorrer todo o elemento do button
+
+      // colocar dentro de li
+
+      // pegar com className a div com a imagem e colocar o titulo
+      // pegar com className a div com o texto e ancora e agregar desc e conteudo
+      // colocar essas divs dentro do elemento li e colocar o elemento li dentro do elemento ul
     });
   });
