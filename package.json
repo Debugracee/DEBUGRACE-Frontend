@@ -1,7 +1,6 @@
 {
   "name": "grupo8-pdi-ejs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +9,20 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "sucrase": "^3.27.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projetodh/grupo8-pdi-ejs.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/projetodh/grupo8-pdi-ejs/issues"
+  },
+  "homepage": "https://github.com/projetodh/grupo8-pdi-ejs#readme",
+  "description": ""
 }

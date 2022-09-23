@@ -1,24 +1,3 @@
-// const content = document.getElementById("content");
-// const text = document.getElementById("content-text");
-
-// function activeDadosAlgoritmo() {
-
-//     textDadosAlgoritmos.classList.toggle('active');
-//     btnDadosAlgoritmos.classList.toggle('active');
-//     console.log('funcionou')
-// }
-
-// btnDadosAlgoritmos.addEventListener('click', activeDadosAlgoritmo);
-
-// function activeGit() {
-
-//     textGit.classList.toggle('active');
-//     btnGit.classList.toggle('active');
-//     console.log('funcionou')
-// }
-
-// btnGit.addEventListener('click', activeGit);
-
 fetch("http://localhost:3500/trilhas")
   .then((res) => res.json())
   .then((res) => {
@@ -27,7 +6,7 @@ fetch("http://localhost:3500/trilhas")
     console.log(trilhas);
     //enviar(res.usuarios[0].cep)
     trilhas
-      .filter((t) => t.trilha === "ciclo_basico")
+      .filter((t) => t.trilha === "back_end")
       .map((trilha) => {
         console.log(trilha);
         const li = document.createElement("li");
