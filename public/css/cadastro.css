@@ -7,44 +7,12 @@ body{
     width: 100%;
 }
 
-.cabecalho{
-    background-color: #1C256D;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1px;
-}
-
-.cabecalho-menu-item {
-    text-decoration: none;
-    font-family: 'Cairo', sans-serif;
-    color: #FFF2E7;
-    font-weight: 250px;
-    font-size: 19px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.cabecalho-menu-item:hover{
-    color: #7b86de;
-}
-
-.cabecalho-menu-item {
-    display: flex;
-    gap: 40px;
-}  
-
-.imagem-cabecalho{
-    width: 230px;
-    height: 40px;
-    vertical-align: top;
-    padding: 7px 0px 4px 13px; 
-}
 form{
-    
+
+    font-family: 'Cairo', sans-serif;
+    color: #010b4e;
     box-sizing: border-box;
-    width: 450px;
+    width: 40rem;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -54,10 +22,11 @@ form{
 .container{
 
     box-sizing: border-box;
-    box-shadow: 1px 1px 5px darkgray;
-    background-color: #E9F0FF;
+    box-shadow: 2px 2px 5px rgb(158, 158, 158);
     padding: 30px;
-    border-radius: 20px;
+    border: solid 0.2rem #596590;
+    background-color: #dfe9fb;
+    border-radius: 0.4rem;
 
 }
 .container-top{
@@ -69,13 +38,14 @@ form{
 
     font-family: 'Cairo', sans-serif;
     font-size: 17px;
+    color: #010b4e;
 
 }
 .container-top h2{
-
-    font-family: 'Courier Prime', monospace;
-    font-size: 30px;
-    color: #D44A4A;
+    font-size: 45px;
+    font-weight: 1rem;
+    font-family: 'Cairo', sans-serif;
+    color: #010b4e;
 
 }
 
@@ -85,12 +55,16 @@ form{
 }
 
 .form-container input {
-    border-radius: 10px;
+    border-radius: 0.4rem;
+    border: none;
     outline: 0;
     width: 100%;
-    height: 30px;
+    height: 4rem;
     padding: 17px;
     display: block;
+    background-color: #ced8eb;
+    font-family: 'Cairo', sans-serif;
+    color: #010b4e;
 
 }
 
@@ -121,7 +95,7 @@ form{
 }
 .container-button{
 
-    border-radius: 10px;
+    border-radius: 1px;
     outline: 0;
     border: none;
     width: 100%;
@@ -130,26 +104,27 @@ form{
     margin-top: 25px;
 
 }
-.return-to-login{
 
-    float: right;
-
-}
 .return-to-login a{
 
     text-decoration: none;
-    color: #1C256D;
+    font-family: 'Cairo', sans-serif;
+    color: #010b4e;
+    font-size: large;
 
 }
+
 .container-button button{
 
-    background-color: #D44A4A;
+    background-color: #1C256D;
+    font-size: 1.2rem;
+    border: none;
     display: inline-block;
-    width: 100%;
-    color: #ffffff;
+    width: 25rem;
+    color: #d5deff;
     outline: none;
-    padding: 10px;
-    border-radius: 30px;
+    padding: 1rem;
+    border-radius: 4px;
     cursor: pointer;
 
 }

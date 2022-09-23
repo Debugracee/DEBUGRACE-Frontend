@@ -1,156 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Debugrace - Página inicial </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/b9c1a80e37.js" crossorigin="anonymous"></script>
-    <link href="css/home.css" rel="stylesheet"> 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/b9c1a80e37.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="css/home.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/partials/header1.css">
+        <title>Debugrace</title>
+    </head>
 
-<body>
+    <body>
+        <!--HEADER-->
+        <%- include('./partials/header1') %>
+        <!--HEADER-->
 
-    <%- include('./partials/header')%>
-    
-<main class="content">
-    <section class="container-fluid second-cabecalho">
-        <div class="text-second-cabecalho">
-            <img class="imagem-cab2" src = "svg/header.svg" alt="Comece a programar agora"> 
-        <p class="paragraph-second-cabecalho"> Te ajudamos a aprender programação do zero, fazendo com que você crie autonomia nos estudos, o que é muito importante na área da tecnologia. </p>
-        </div>
-       <img class="second-cabecalho-imagem" src="svg/menina.svg">
-    </section>
-
-    
-    <!-- Julio essa é a sua parte -->
-    <!-- <section class="container-fluid p-5">
-        <div class="text-center">
-            <h5 class="text-center-item">
-                <strong>ALGUNS DOS NOSSOS CURSOS</strong>
-            </h5>
-        </div>
-    </section>
-       
-
-    <div class="justify-content-around container-fluid container-cursos content-cursos"> 
-        <script src="js/home.js"></script>
-    
-        <section id="listaGuias" class="row" >
-            <div class="col guias cards">
-              <div class="row card produto cartao" style="background-color: #F4F8FF;">
-                <img id="javascript" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title title-body-javascript"></h5>
-                  <p class="card-text paragaph-body-javascript">
-                    <br/>
-                    <span class="badge bg-success"></span>
-                  </p>
-                  <button class="btn-javascript btn-footer-javascript" type="button">Detalhes</button>
+        <main>
+            <!--SEGUNDO HEADER-->   
+            <section class="cabecalho w3-container w3-row">
+                <div class="cab w3-container w3-half">
+                    <img class="frase w3-center" src="img/fraseHome.png" alt="Comece a aprender programação agora!"><br><br><br>
+                    <p class="frase2 w3-center">Nosso objetivo é ajudar você a aprender programação de forma autodidata, criando autonomia nos estudos e tendo total controle no que e quando estudar. Criamos esse site para te guiar no começo dos estudos, 
+                    onde muitas vezes ficamos perdidos com tanto conteúdo que tem disponibilizado na internet.</p><br>
                 </div>
-              </div>
-            </div>
-        </section>
-    </div>
-
-            <div class="more-options-cursos"> 
-                <a href="/guia-estudos"> Ver Mais<i class="fa-solid fa-angles-right"></i></a>
-            </div>
-        </div>  -->
-        <!--FIM-->
-
-    <!-- Julio parte 2 -->
-    <section class="container-fluid p-5">
-        <img class="imagem-comofuncionamos" src = "svg/ComoFunciona.svg" alt="como funcionamos"> 
-    
-        <div class="container-fluid mt-5">
-            <div class="p-1 box-o">
-            <div class="box-blue-o"> 
-        <h5 class="box-blue-o-title"> Estude no seu tempo </h5>
-        <p class="box-blue-o-paragaph"> Ajudamos você a se organizar nos estudos para não ficar perdido com tanto conteúdo gratuito que iremos compartilhar. </p> 
-    </div>
-        <div class="box-red-t"> 
-            <h5 class="box-red-t-title"> Guia de estudos </h5>
-            <p class="box-red-t-paragaph"> Ele servirá para dar um norte para as pessoas que não sabem por onde começar, além disso te ajudaremos a seguir nessa jornada de aprendizado de forma autodidata. </p>
-    </div>
-    </div>
-    <div class="d-flex box-t flex-wrap p-1 mt-4">
-        <div class="box-red-tt"> 
-         <h5 class="box-red-tt-title"> Tudo em um só lugar </h5>
-            <p class="box-red-tt-paragaph"> Com tanto conteúdo gratuito na internet é normal ficar perdido, o debugrace é exatamente o que você precisa para organizar seus estudos </p>
-        </div>
-            <div class="box-blue-f"> 
-                <h5 class="box-blue-f-title"> Blog </h5>
-                    <p class="box-blue-f-paragaph"> Ele servirá para dar um norte para as pessoas que não sabem por onde começar, além disso te ajudaremos a seguir nessa jornada de aprendizado de forma autodidata. </p>
-                    </div>
+                <div class="cab w3-container w3-half">
+                    <img class="imagem" src="img/cabecalho2.png" alt="menina programando">
                 </div>
-            </div>
-</section> <!-- até aqui -->    
+            </section>
+            <!--SEGUNDO HEADER--> 
 
 
+             <!--MOSTRANDO OS GUIAS DE ESTUDOS-->
+            <section class="w3-container w3-center">
+                <br>
+                <h4 class="guia1">Guias de estudos: </h4>
 
-    <!-- Isaque essa é a sua parte -->
-    <section class="container-fluid p-5">
-        
-        <div class="caixa-recursos">
-    <img class="imagem-recursos" src="svg/recursos.svg" alt="RECURSOS">
-</div>
-    <div class="caixa container">
-        <div class="row">
-            <div class="col">
-                <div>
-                    <h5 class="paragrafo-1">
-                        "Esse é o site que queriamos que tivesse quando começamos a estudar por conta própria.
-                    </h5>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="bloco1">
-                    <p class="paragrafo-2">
-                        Conteúdos de
-                        introdução e
-                        apronfundamento.
-                    </p>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="imagem-fon col">
-                        <img class="imagem" src="img/Captura de Tela 2022-04-25 às 14.59.10.png">
-                    </div>
-
-                    <div class="coluna-bloco-vermelho col">
-                        <div class="bloco2">
-                            <p class="paragrafo-3">
-                                Exercícios e projetos para praticar
-                                e colocar no seu portifólio.</p>
+                <!--Card unico dos guias-->
+                <div class="justify-content-around container-fluid container-cursos content-cursos"> 
+                    <script src="js/homeCards.js"></script>
+                    <section id="listaGuias" class="row" >
+                        <div class="col guias cards guiasEstudos"><br>
+                          <div class="row card produto cartao " style="background-color: #F4F8FF; align-items: center; border: none;">
+                            <img id="javascript" src="" class="card-img-top imguia" alt="">
+                            <div class="card-body">
+                              <h3 class="card-title title-body-javascript titulo" style="text-align: center;"></h3>
+                              <p class="card-text paragaph-body-javascript">
+                                <br/>
+                                <span class="badge bg-success"></span>
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                    </section>
+                </div><br>
+                <!--Card unico dos guias-->
+                <a class="guia h4" href="/guia-estudos">Clique aqui para ver com mais detalhes os contéudos que serão abordados em cada trilha</a>
+            </section><br><br><br>
+            <!--MOSTRANDO OS GUIAS DE ESTUDOS-->
+            
+             <!--PARTE TRES-->
+             <section>
+             <div>
+                <img class="w3-container w3-panel fraseA" src="img/frase3.svg" alt="Ser autodidata é uma necessidade">
+                <img class="w3-container w3-panel w3-center fraseA mobile" src="img/fraseAMobile.svg">
+             </div><br><br>
 
-                    <div class="paragrafo-final">
-                        <p class="conjunto-paragrafo-final">
-                            Existem muitos recursos por aí, mas alguns são melhores que outros. Você não precisa
-                            de
-                            mais uma lista de “200+ Cursos Online Gratuitos”.
-                        </p>
+             <div class="w3-container w3-center">
+                <p class="aspas">"</p><p class="fraseB">Esse é o site que queriamos que tivesse quando <br>começamos a estudar por conta prórpia.</p><p class="aspas">"</p></p>
+             </div>
 
-                    </div>
-
+             <section class="w3-container w3-center">
+                <div class="w3-half">
+                    <h4 class="fraseC">Conteúdos de introdução e apronfundamento</h4>
                 </div>
-            </div>
+                <div class="w3-half frasesCD">
+                    <h4 class="fraseD">Preparamos exercicios e projetos para praticar <br> e melhorar sua lógica.</h4>
+                </div>
+             </section><br>
 
+             <div class="w3-container w3-center">
+                <p class="aspas">"</p><p class="fraseE">Existem muitos recursos por aí, mas alguns são melhores que outros. <br>Você não precisa de mais uma lista de “200+ Cursos Online Gratuitos.</p><p class="aspas">"</p>
+             </div>
+            </section>
+            <!--PARTE TRES-->
 
-        </div>
+            <!--PARTE QUATRO: RECURSOS-->
+            <section>
+                <div class="w3-panel frase4A">
+                    <img class="frase4 w3-center" src="img/frase4.svg"><br><br>
+                    <img class="frase4 w3-center mobile frase4Mobile" src="img/frase4Mobile.svg"><br><br>
+                </div>
+                <div class="w3-container w3-center">
+                    <p class="aspasCard">"</p><p class="fraseCard">Ser autodidata é ter a incapacidade de conviver com a dúvida.</p><p class="aspasCard">"</p></p>
+                 </div>
 
-    </div>
-    </div>
-    <div>
-    </section>
-</main>
-<%- include('./partials/footer')%>
-</body>
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            </section>
+
+            <section class="cards1">
+                <div class="w3-container w3-half w3-center card1">
+                    <h3 style="font-family: 'Cairo', sans-serif;">Ser autodidata</h3>
+                    <p>É ter a capacidade de aprender um conteúdo de forma autônoma, ou seja, administrando seu próprio processo de estudo, basicamente, é o ato de estudar e adquirir conhecimentos por si mesmo.</p>
+                </div>
+                <div class="w3-container w3-half w3-center card2">
+                    <h3 style="font-family: 'Cairo', sans-serif;">Guia de estudos</h3>
+                    <p>Ele servirá para dar um norte para as pessoas que não sabem por onde começar ou como continuar.  Onde compartilhamos conteúdos que também utilizamos e propomos exercícios para praticar sua lógica.</p>
+                </div><br></br><br>
+            </section>
+
+            <section class="cards2">
+                <div class="w3-container w3-half w3-center card2">
+                    <h3 style="font-family: 'Cairo', sans-serif;">Discord</h3>
+                    <p>É ter a capacidade de aprender um conteúdo de forma autônoma, ou seja, administrando seu próprio processo de estudo, basicamente, é o ato de estudar e adquirir conhecimentos por si mesmo.</p>
+                </div>
+                <div class="w3-container w3-half w3-center card1">
+                    <h3 style="font-family: 'Cairo', sans-serif;">Não somos uma lista de cursos</h3>
+                    <p>Nosso objetivo é compartilhar materiais que usamos nos nossos estudos, como cursos do YT, PDF's, sites para praticar. Não iremos te dar uma lista com vários cursos gratuitos pra você ficar perdido.</p>
+                </div>
+            </section>
+
+        </main>
+    </body>
 </html>

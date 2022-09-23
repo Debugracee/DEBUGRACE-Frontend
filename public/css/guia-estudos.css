@@ -13,21 +13,6 @@ body {
 
 }
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #1C256D;
-    padding: 5px;
-}
-
-.logo {
-    width: 18vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo img {
     width: 17vw;
     height: 5vh;
