@@ -1,6 +1,11 @@
 const express = require("express");
-// const { usuario } = require("./public/js/login");
-// import { kiko } from "./public/js/usuario";
+
+// const usuario = localStorage.getItem("usuario");
+// const usuarioObject = JSON.parse(usuario);
+
+
+// fazer um fetch para pegar informações de usuario
+// fazer else if nas rotas para ver se o usuario está preenchido e se tem o statusLogin = true
 
 const app = express();
 const port = 5000;
@@ -17,6 +22,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/cadastro", (req, res) => {
+
   res.render("cadastro");
 });
 
@@ -25,12 +31,19 @@ app.get("/guia-estudos", (req, res) => {
 });
 
 app.get("/guia-estudos/ciclo-basico", (req, res) => {
+  // const usuario = require("../DEBUGRACE-Backend/model/usuarios");
+  // const { email } = req.body
+  // const result = await usuario.findOne({ where: { email } });
   res.render('ciclo-basico')
-//   if (usuario.statusLogin === true) {
-//     res.render("ciclo-basico")
-//   } else {
-//   res.render("login");
-//   }
+
+  // const usuario = localStorage.getItem("usuario");
+  // const usuarioObject = JSON.parse(usuario);
+  // const status = usuarioObject.statusLogin
+  // if (!email) {
+  //   res.render("login")
+  // } else {
+  // res.render("ciclo-basico");
+  // }
  });
 
 app.get("/guia-estudos/back-end", (req, res) => {

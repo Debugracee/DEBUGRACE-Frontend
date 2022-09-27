@@ -1,1 +1,2 @@
-// export const usuario = null;
+const usuario = localStorage.getItem("usuario");
+export const usuarioObject = JSON.parse(usuario);

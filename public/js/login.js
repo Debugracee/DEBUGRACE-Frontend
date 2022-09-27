@@ -45,7 +45,7 @@ async function loginUsuario() {
       localStorage.setItem("usuario", JSON.stringify(usuario));
       console.log(usuario.id);
       if (usuario.id) {
-        window.location.assign("http://localhost:5000/pagina-inicial");
+        window.location.assign("http://localhost:5000/guia-estudos");
       }
     });
 }
