@@ -1,25 +1,14 @@
-
-
-
 console.log("carregou");
-
-
-
-
-
-
 const form = document.querySelector("#formLogin");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    loginUsuario();
-    console.log("clicou");
-  });
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  loginUsuario();
+  console.log("clicou");
+});
 
 async function loginUsuario() {
-
-
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
 
   email.addEventListener("keyup", function () {
     if (email.value.trim() === "") {
@@ -43,7 +32,7 @@ const password = document.getElementById("password");
     email: email.value.trim(),
     senha: password.value.trim(),
   };
-  
+
   await fetch("http://localhost:3500/login", {
     method: "POST",
     headers: { "Content-type": "application/json" },
@@ -51,17 +40,15 @@ const password = document.getElementById("password");
   })
     .then((res) => res.json())
     .then((res) => {
-      const usuario = res;
-      exports.usuario = usuario
-      // console.log(usuario.usuario.id)
-      if(usuario.usuario.id) {
-        window.location.assign("http://localhost:5000/pagina-inicial")
+      const usuario = res.usuario;
+      console.log(usuario);
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      console.log(usuario.id);
+      if (usuario.id) {
+        window.location.assign("http://localhost:5000/pagina-inicial");
       }
-  });
-  }
-
-
-  
+    });
+}
 
 function alertError(input, message) {
   const control = input.parentElement;
