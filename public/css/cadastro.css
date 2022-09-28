@@ -1,10 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
 
 body{
-    background-color: #ffffff;
+    background-color: #9ea6c1ad;
     box-sizing: border-box;
     margin: 0;
     width: 100%;
+}
+
+header{
+    box-shadow: 0 0 1em #1c256d9a;
+}
+
+.col{
+
+    margin: 0;
+
+}
+.config {
+
+    text-decoration: none;
+
+}
+.titulo {
+
+    height: 25px;
+    padding-left: 41%;
+    text-align: start;
+
+}
+.text{
+
+    text-align: center;
+    padding-top: 10%;
+
+}
+.user {
+
+    text-decoration: none;
+    margin: 0;
+    padding-left: 20%;
+
+}
+header h1 {
+
+    padding-left: 4%;
+
+}
+.configlogo {
+
+    padding-left: 20%;
+    height: 200px;
+    justify-content: right;
+
 }
 
 form{

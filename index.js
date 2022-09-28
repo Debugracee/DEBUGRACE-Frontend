@@ -11,7 +11,7 @@ const app = express();
 const port = 5000;
 
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/"));
 
 app.get("/pagina-inicial", (req, res) => {
   res.render("home");
@@ -64,8 +64,8 @@ app.get("/guia-estudos/front-end", (req, res) => {
 //   }
  });
 
-app.get('/configcadastro', (req, res) => {
-    res.render('configcadastro')
+app.get('/configuracoes', (req, res) => {
+    res.render('configuracoes');
 });
 
 app.listen(port, () => {

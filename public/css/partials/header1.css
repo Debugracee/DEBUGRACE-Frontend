@@ -7,9 +7,6 @@
     box-sizing: border-box; 
 }
 
-body{
-    background-color: #9ea6c1ad;
-}
 
 /*HEADER*/
 header {
@@ -38,7 +35,6 @@ header img{
 .entrar{
     border-radius: 0.2rem;
     background-color: #ab3956;
-    cursor: pointer;
 }
 
 .entrar:hover {background-color: #b31a40; color: rgb(228, 236, 252);}

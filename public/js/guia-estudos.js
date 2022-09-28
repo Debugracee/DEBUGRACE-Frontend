@@ -22,13 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(status);
         if (!status) {
           window.location.assign("http://localhost:5000/guia-estudos");
+          window.location.assign("http://localhost:5000/configuracoes");
         } else {
           console.log(logado);
           const configElement = document.querySelector("#item1");
           const logoutButton = document.querySelector("#item2");
-  
+
           configElement.innerHTML = "CONFIGURAÇÕES";
-          configElement.href = "/configcadastro";
+          configElement.href = "/configuracoes";
   
           logoutButton.innerHTML = "SAIR";
           logoutButton.removeAttribute("href");

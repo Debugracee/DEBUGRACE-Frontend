@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(logado);
         const configElement = document.querySelector("#item1");
         const logoutButton = document.querySelector("#item2");
-
+      
         configElement.innerHTML = "CONFIGURAÇÕES";
-        configElement.href = "/configcadastro";
+        configElement.href = "/configuracoes";
         logoutButton.innerHTML = "SAIR";
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {

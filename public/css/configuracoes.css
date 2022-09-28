@@ -2,17 +2,19 @@
 
 body {
 
-    background-color: #E9F0FF;
+    background-color: #9ea6c1ad;
     right: 0;
 
 }
-header {
+
+.header{
 
     width: 100%;
     padding: 1%;
     display: inline-block;
     background-color: #1C256D;
     color: #FFFFFF;
+    box-shadow: 0 0 1em #1c256d9a;
 
 }
 /*
@@ -52,11 +54,7 @@ header {
     padding-left: 20%;
 
 }
-header h1 {
 
-    padding-left: 4%;
-
-}
 .configlogo {
 
     padding-left: 20%;
@@ -122,7 +120,7 @@ form small {
     height: 65px;
     border-radius: 10px;
     color:#FFFFFF;
-    background-color: #D44A4A;
+    background-color: #753354;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
