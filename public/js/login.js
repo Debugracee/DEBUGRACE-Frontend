@@ -40,11 +40,14 @@ async function loginUsuario() {
   })
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
       const usuario = res.usuario;
+      const token = res.token;
       console.log(usuario);
       localStorage.setItem("usuario", JSON.stringify(usuario));
+      localStorage.setItem("token", JSON.stringify(token));
       console.log(usuario.id);
-      if (usuario.id) {
+      if (usuario.id && token) {
         window.location.assign("http://localhost:5000/guia-estudos");
       }
     });

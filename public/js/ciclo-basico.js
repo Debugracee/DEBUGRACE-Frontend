@@ -19,6 +19,14 @@
 
 // btnGit.addEventListener('click', activeGit);
 
+const usuario = localStorage.getItem("usuario");
+const token = localStorage.getItem("token")
+const tokenObject = JSON.parse(token)
+console.log(tokenObject)
+if(tokenObject === null) {
+  window.location.assign("http://localhost:5000/login")
+}
+
 fetch("http://localhost:3500/trilhas")
   .then((res) => res.json())
   .then((res) => {
