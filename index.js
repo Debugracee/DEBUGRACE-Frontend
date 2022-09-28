@@ -1,4 +1,9 @@
 const express = require("express");
+const jwt = require('jsonwebtoken');
+const auth = require("../DEBUGRACE-Backend/controllers/Middleware/auth");
+// const auth = require("../DEBUGRACE-Backend/controllers/Middleware/auth");
+
+
 
 // const usuario = localStorage.getItem("usuario");
 // const usuarioObject = JSON.parse(usuario);
@@ -13,6 +18,7 @@ const port = 5000;
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public/"));
 
+
 app.get("/pagina-inicial", (req, res) => {
   res.render("home");
 });
@@ -20,6 +26,9 @@ app.get("/pagina-inicial", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+
+
+  
 
 app.get("/cadastro", (req, res) => {
 
@@ -31,10 +40,37 @@ app.get("/guia-estudos", (req, res) => {
 });
 
 app.get("/guia-estudos/ciclo-basico", (req, res) => {
+  // let usuario = require("../../model/usuarios");
+  // const usuarios = await usuario.findAll();
+  // return res.status(201).json({usuario: usuarios})
+  res.render("ciclo-basico")
+
+
+
+
+//   const authHeader = req.headers["authorization"];
+//   const token = authHeader && authHeader.split("  ")[1]; 
+//   const secret = process.env.SECRET;
+    
+ 
+  
+// try {
+//    if(jwt.verify(token, secret)) {
+//     res.render('ciclo-basico')
+//     next()
+//   } else {
+//     res.redirect("/login")
+//   }
+// } catch (error) {
+//   console.log(error)
+// }
+     
+
   // const usuario = require("../DEBUGRACE-Backend/model/usuarios");
   // const { email } = req.body
   // const result = await usuario.findOne({ where: { email } });
-  res.render('ciclo-basico')
+
+  
 
   // const usuario = localStorage.getItem("usuario");
   // const usuarioObject = JSON.parse(usuario);
