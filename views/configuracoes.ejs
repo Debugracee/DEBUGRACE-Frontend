@@ -11,8 +11,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/b9c1a80e37.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="css/partials/header1.css">
+        <link rel="stylesheet" href="../css/partials/header1.css">
         <script src="https://kit.fontawesome.com/b9c1a80e37.js" crossorigin="anonymous"></script>
+       
     </head>
 <body style="background-color: #9ea6c1ad;">
     <!--HEADER-->
@@ -33,43 +34,52 @@
     </section>
 
     <br></br>
-    <form id="form" method="post">
+    <form id="form">
         <div class="alteranome">
             <label><strong>Nome</strong></label></br><br>
-            <input id="nome" name="nome" type="text" title="Alterar seu nome">
+            <input id="nome" name="nome" type="text" title="Alterar seu nome" disabled>
             <small>Mensagem de erro</small>
-            <button class="editar" type="submit" title="Editar">Editar</button>
+            <button id="btnNome" class="editar" type="button" title="Editar">Editar</button>
         </div>
         </br>
         
         <div class="alteraemail">
             <label><strong>Email</strong></label></br><br>
-            <input id="email" name="email" type="email" title="Alterar seu email">
-            <button class="editar" type="submit" title="Editar">Editar</button>
+            <input id="email" name="email" type="email" title="Alterar seu email" disabled>
+            <button id="btnEmail" class="editar" type="button" title="Editar">Editar</button>
+            <small>Mensagem de erro</small>
+        </div>
+        </br>
+
+        <div class="alteranascimento">
+            <label><strong>Nascimento</strong></label></br><br>
+            <input id="data" name="data" type="date" title="Alterar informações de gênero" disabled>
+            <button id="btnData" class="editar" type="button" title="Editar">Editar</button>
             <small>Mensagem de erro</small>
         </div>
         </br>
 
         <div class="alteranascimento">
             <label><strong>Gênero</strong></label></br><br>
-            <input id="gender" name="gender" type="text" title="Alterar informações de gênero">
-            <button class="editar" type="submit" title="Editar">Editar</button>
+            <input id="gender" name="gender" type="text" title="Alterar informações de gênero" disabled>
+            <button id="btnGender" class="editar" type="button" title="Editar">Editar</button>
             <small>Mensagem de erro</small>
         </div>
         </br>
 
         <div class="alterasenha">
             <label> <strong>Senha</strong></label></br><br>
-            <input id="password" name="password" type="password" title="Altere sua senha">
-            <button class="editar" type="submit" title="Editar">Editar</button>
+            <input id="password" name="password" type="password" title="Altere sua senha" disabled>
+            <button id="btnSenha" class="editar" type="button" title="Editar">Editar</button>
             <small>Mensagem de erro</small>
         </div>
         </br>
         <div class="confirma">
-            <button class="check-button" type="submit" title="Salvar">Salvar alterações</button>
-            <a class="delete" href="#">Deletar conta</a>
+            <button id="btnSalvar" class="check-button" title="Salvar">Salvar alterações</button>
+            <a id="btnDelete" class="delete" href="#">Deletar conta</a>
         </div>
     </form>
+     <script src="js/configuracoes.js"> </script>
 </body>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -1,2 +1,3 @@
 const usuario = localStorage.getItem("usuario");
-export const usuarioObject = JSON.parse(usuario);
+const usuarioObject = JSON.parse(usuario);
+export const usuarioId = usuarioObject.id

@@ -1,6 +1,4 @@
 const express = require("express");
-const jwt = require('jsonwebtoken');
-const auth = require("../DEBUGRACE-Backend/controllers/Middleware/auth");
 // const auth = require("../DEBUGRACE-Backend/controllers/Middleware/auth");
 
 
@@ -102,6 +100,7 @@ app.get("/guia-estudos/front-end", (req, res) => {
 
 app.get('/configuracoes', (req, res) => {
     res.render('configuracoes');
+
 });
 
 app.listen(port, () => {
