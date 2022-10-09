@@ -22,10 +22,10 @@ fetch("http://localhost:3500/trilhas")
         const lista = document.getElementById("lista");
         lista.appendChild(li);
 
-        const contentTitle = document.createElement("div");
+        // const contentTitle = document.createElement("div");
         const title = document.createElement("h5");
         // title.title = "../svg/logicaDeProgramacao.svg";
-        contentTitle.appendChild(title);
+        // contentTitle.appendChild(title);
         const text = document.createElement("div");
         text.classList.add("content-text");
         // const p = document.querySelector("#text");
@@ -34,11 +34,12 @@ fetch("http://localhost:3500/trilhas")
         // getId.appendChild(p)
         // const a = document.querySelector("#link");
         const a = document.createElement("a");
-        a.innerHTML = "Acessar Conteúdo";
+        a.innerHTML = "Clique aqui para acessar o conteúdo";
         // a.href = trilha.conteudo;
+        text.appendChild(title)
         text.appendChild(p);
         text.appendChild(a);
-        li.appendChild(contentTitle);
+        // li.appendChild(contentTitle);
         li.appendChild(text);
         title.innerHTML = trilha.conteudo;
         p.innerHTML = trilha.descConteudo;
