@@ -47,7 +47,7 @@ async function loginUsuario() {
       localStorage.setItem("usuario", JSON.stringify(usuario));
       localStorage.setItem("token", JSON.stringify(token));
       console.log(usuario.id);
-      if (usuario.id && token) {
+      if(usuario.id && token) {
         window.location.assign("http://localhost:5000/guia-estudos");
       }
     });

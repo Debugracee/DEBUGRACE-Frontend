@@ -38,14 +38,14 @@ if (tokenObject === null) {
   fetch("http://localhost:3500/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
-    body: JSON.stringify({ email: usuarioObject.email }),
+    body: JSON.stringify({ email: usuarioObject.email || usuarioAlteradoObject.email }),
   })
     .then((res) => res.json())
     .then((res) => {
       const logado = res.statusLogado;
       const status = logado.statusLogin;
       console.log(status);
-      if (!status && !tokenObject) {
+      if (!status && tokenObject === null) {
         window.location.assign("http://localhost:5000/login");
         // colocar a estilizacao "normal aqui" -> carregar modal
       } else {
@@ -55,7 +55,7 @@ if (tokenObject === null) {
         const logoutButton = document.querySelector("#item2");
 
         configElement.innerHTML = "CONFIGURAÇÕES";
-        configElement.href = `/configuracoes`;
+        configElement.href = '/configuracoes';
 
         logoutButton.innerHTML = "SAIR";
         logoutButton.removeAttribute("href");
@@ -92,14 +92,28 @@ btnSave.addEventListener("click", () => {
       email: mudarEmail.value.trim(),
       nascimento: mudarNascimento.value.trim(),
       genero: mudarGenero.value.trim(),
-      senha: mudarSenha.value
+      senha: mudarSenha.value,
     }),
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      const usuarioAtualizado = res.usuarioAlterado;
+      localStorage.setItem(
+        "usuarioAtualizado",
+        JSON.stringify(usuarioAtualizado)
+      );
+      localStorage.removeItem("usuario")
+      const usuarioAlterado = localStorage.getItem("usuarioAtualizado");
+      const usuarioAlteradoObject = JSON.parse(usuarioAlterado);
+      mudarNome.value = usuarioAlteradoObject.nome;
+      mudarEmail.value = usuarioAlteradoObject.email;
+      // mudarNascimento.value = usuarioAlteradoObject.nascimento
+      mudarGenero.value = usuarioAlteradoObject.genero;
+      mudarSenha.value = usuarioAlteradoObject.senha;
+    });
   // quando altera o usuario, é preciso carregar um novo storage
   // alterar a lógiac das outras páginas para carregar quando tiver um usuario ou um usuario alterado
-  mudarNome.value = usuarioObject.nome;
-  mudarEmail.value = usuarioObject.email;
-  // mudarNascimento.value = usuarioObject.nascimento
-  mudarGenero.value = usuarioObject.genero;
-  mudarSenha.value = usuarioObject.senha;
+  // fazer validacao onde se nao houver token, ele vai chamar a rota de deslog
+  // pego o storage do usuario e colocar cada atributo do usuario atual dentro dele
+  // localstorage.nome = usuarioAtualizado.nome -- sla acho que da bom(seguir essa logica)
 });

@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const usuario = localStorage.getItem("usuario");
   const usuarioObject = JSON.parse(usuario);
+  const token = localStorage.getItem("token");
+  const tokenObject = JSON.parse(token);
+  console.log(tokenObject);
+  
   fetch("http://localhost:3500/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
@@ -11,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const logado = res.statusLogado;
       const status = logado.statusLogin;
       console.log(status);
-      if (!status) {
+      if (!status && tokenObject === null) {
         window.location.assign("http://localhost:5000/pagina-inicial");
       } else {
         console.log(logado);
