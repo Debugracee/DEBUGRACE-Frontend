@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -15,10 +15,10 @@ body {
 
 /*HEADER*/
 header {
-  background-color: #1C256D;
+  background-color: #1c256d;
 }
 
-header img{
+header img {
   width: 15.5rem;
   margin-left: 4rem;
 }
@@ -29,20 +29,23 @@ header img{
 }
 
 .nav-link {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: rgb(228, 236, 252);
 }
 
-.nav-link:hover{
-  color:rgb(101, 109, 199)
+.nav-link:hover {
+  color: rgb(101, 109, 199);
 }
 
-.entrar{
+.entrar {
   border-radius: 0.2rem;
   background-color: #ab3956;
 }
 
-.entrar:hover {background-color: #b31a40; color: rgb(228, 236, 252);}
+.entrar:hover {
+  background-color: #b31a40;
+  color: rgb(228, 236, 252);
+}
 /*HEADER*/
 
 /* .menu i {
@@ -134,17 +137,17 @@ header img{
 .content {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 70vw;
   max-width: 90vw;
   margin-top: 40px;
   background-color: #f9fbff;
   border: 2px solid #2b3d99;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
   border-radius: 3px;
   padding: 10px;
-  height: 50vh;
+  height: 60vh;
+  box-shadow: -12px -12px 0px #1c256d;
   align-items: center;
-  justify-content: space-around;
 }
 
 .btn-title {
@@ -160,32 +163,48 @@ header img{
 }
 
 .content-text {
-  /* display: none; */
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 60vw;
   align-items: center;
-  /* visibility: hidden; */
   padding: 5px;
-  margin: 10px;
+  margin-top: 1.5rem;
+  height: 45vh;
+  justify-content: space-around;
+}
+
+.content-text h5 {
+  color: #363f82;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
+  margin-bottom: 47px;
 }
 
 .content-text p {
-  border: solid;
   margin-bottom: 1rem;
-  width: 60vw;
+  width: 50vw;
   font-family: "Cairo", sans-serif;
   font-size: 1.2rem;
+  color: #363f82;
+  text-align: justify;
 }
 
 .content-text a {
-  border: solid;
   font-family: "Cairo", sans-serif;
   padding: 5px 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
+  background: #ad2647;
+  border: 2px solid #330d0d;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 10px;
+  color: #EFBAD4;
+  text-align: center;
+  width: 30vw;
+  margin-top: 20px;
 }
+
 
 /* .content.active {
     height: 50vh;
