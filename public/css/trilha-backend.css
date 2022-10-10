@@ -89,22 +89,26 @@ header img {
   color: #27272c;
 } */
 
+
 .painel {
   background-color: #1c256d;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0 0 1rem #1c256d9a;
 }
 
 .painel-text {
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 50vw;
+  align-items: center;
+  font-size: 1.3rem;
 }
 
 .painel-text img {
-  width: 40vw;
+  width: 27vw;
 }
 
 .painel-text p {
@@ -133,22 +137,24 @@ header img {
   margin-top: 1.5rem;
   color: #363f82;
   font-weight: 700;
+  font-size: 2.3rem;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
   max-width: 90vw;
   margin-top: 40px;
   background-color: #f9fbff;
   border: 2px solid #2b3d99;
-  /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   padding: 10px;
-  height: 60vh;
+  height: 50vh;
   box-shadow: -12px -12px 0px #1c256d;
   align-items: center;
+  
 }
 
 .btn-title {
@@ -169,7 +175,7 @@ header img {
   width: 60vw;
   align-items: center;
   padding: 5px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   height: 45vh;
   justify-content: space-around;
 }
@@ -178,28 +184,28 @@ header img {
   color: #363f82;
   font-weight: 700;
   font-family: "Cairo", sans-serif;
-  margin-bottom: 47px;
+  font-size: 2rem;
 }
 
 .content-text p {
   margin-bottom: 1rem;
-  width: 50vw;
+  width: 70vw;
   font-family: "Cairo", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #363f82;
   text-align: justify;
 }
 
 .content-text a {
   font-family: "Cairo", sans-serif;
-  padding: 5px 5px;
+  padding: 14px 14px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
   background: #ad2647;
   border: 2px solid #330d0d;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 10px;
+  border-radius: 6px;
   color: #efbad4;
   text-align: center;
   width: 30vw;
@@ -273,7 +279,6 @@ header img {
     font-size: 0.7rem;
   }
 }
-
 /* .content.active {
     height: 50vh;
 }
