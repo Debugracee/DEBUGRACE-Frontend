@@ -64,7 +64,7 @@ fetch("http://localhost:3500/trilhas")
         li.appendChild(text);
         title.innerHTML = trilha.conteudo;
         p.innerHTML = trilha.descConteudo;
-        a.href = trilha.linkConteudo;
+        a.href = trilha.pdfConteudo;
         // const id = li.id = trilha.id
 
         // function activeContent() {
