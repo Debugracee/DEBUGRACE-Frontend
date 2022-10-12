@@ -1,9 +1,27 @@
 const usuario = localStorage.getItem("usuario");
-const token = localStorage.getItem("token")
-const tokenObject = JSON.parse(token)
-console.log(tokenObject)
-if(tokenObject === null) {
-  window.location.assign("http://localhost:5000/login")
+const token = localStorage.getItem("token");
+const tokenObject = JSON.parse(token);
+const usuarioObject = JSON.parse(token);
+console.log(tokenObject);
+if (usuarioObject && tokenObject === null) {
+  window.location.assign("http://localhost:5000/login");
+} else {
+  const configElement = document.querySelector("#item1");
+  const logoutButton = document.querySelector("#item2");
+
+  configElement.innerHTML = "CONFIGURAÇÕES";
+  configElement.href = "/configuracoes";
+  logoutButton.innerHTML = "SAIR";
+  logoutButton.removeAttribute("href");
+  logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("usuario");
+    fetch("http://localhost:3500/deslog", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ email: usuarioObject.email }),
+    }).then((res) => res.json());
+    window.location.assign("http://localhost:5000/login");
+  });
 }
 
 fetch("http://localhost:3500/trilhas")
@@ -36,7 +54,7 @@ fetch("http://localhost:3500/trilhas")
         const a = document.createElement("a");
         a.innerHTML = "Clique aqui para acessar o conteúdo";
         // a.href = trilha.conteudo;
-        text.appendChild(title)
+        text.appendChild(title);
         text.appendChild(p);
         text.appendChild(a);
         // li.appendChild(contentTitle);
@@ -52,7 +70,7 @@ fetch("http://localhost:3500/trilhas")
         //     console.log(i);
         //     // more statements
         //  }
-         
+
         // //   if(id){
         // //     text.classList.toggle("active")
         // //   li.classList.toggle("mudar");

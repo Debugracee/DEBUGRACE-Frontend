@@ -20,12 +20,30 @@
 // btnGit.addEventListener('click', activeGit);
 
 const usuario = localStorage.getItem("usuario");
-const token = localStorage.getItem("token")
-const tokenObject = JSON.parse(token)
-console.log(tokenObject)
-if(tokenObject === null) {
-  window.location.assign("http://localhost:5000/login")
-} 
+const token = localStorage.getItem("token");
+const tokenObject = JSON.parse(token);
+const usuarioObject = JSON.parse(token);
+console.log(tokenObject);
+if (usuarioObject && tokenObject === null) {
+  window.location.assign("http://localhost:5000/login");
+} else {
+  const configElement = document.querySelector("#item1");
+  const logoutButton = document.querySelector("#item2");
+
+  configElement.innerHTML = "CONFIGURAÇÕES";
+  configElement.href = "/configuracoes";
+  logoutButton.innerHTML = "SAIR";
+  logoutButton.removeAttribute("href");
+  logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("usuario");
+    fetch("http://localhost:3500/deslog", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ email: usuarioObject.email }),
+    }).then((res) => res.json());
+    window.location.assign("http://localhost:5000/login");
+  });
+}
 
 fetch("http://localhost:3500/trilhas")
   .then((res) => res.json())
@@ -57,7 +75,7 @@ fetch("http://localhost:3500/trilhas")
         const a = document.createElement("a");
         a.innerHTML = "Clique aqui para acessar o conteúdo";
         // a.href = trilha.conteudo;
-        text.appendChild(title)
+        text.appendChild(title);
         text.appendChild(p);
         text.appendChild(a);
         // li.appendChild(title);
@@ -65,7 +83,7 @@ fetch("http://localhost:3500/trilhas")
         title.innerHTML = trilha.conteudo;
         p.innerHTML = trilha.descConteudo;
         a.href = trilha.pdfConteudo;
-      
+
         // const id = li.id = trilha.id
 
         // function activeContent() {
@@ -74,7 +92,7 @@ fetch("http://localhost:3500/trilhas")
         //     console.log(i);
         //     // more statements
         //  }
-         
+
         // //   if(id){
         // //     text.classList.toggle("active")
         // //   li.classList.toggle("mudar");
@@ -91,4 +109,4 @@ fetch("http://localhost:3500/trilhas")
         // pegar com className a div com o texto e ancora e agregar desc e conteudo
         // colocar essas divs dentro do elemento li e colocar o elemento li dentro do elemento ul
       });
-});
+  });
