@@ -57,7 +57,7 @@ fetch("http://localhost:3500/status", {
       const logoutButton = document.querySelector("#item2");
 
       configElement.innerHTML = "CONFIGURAÇÕES";
-      configElement.href = `/configuracoes/:${usuarioObject.id}`;
+      configElement.href = `/configuracoes`;
 
       logoutButton.innerHTML = "SAIR";
       logoutButton.removeAttribute("href");

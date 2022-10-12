@@ -1,21 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap");
 
 body {
-
-    background-color: #9ea6c1ad;
-    right: 0;
-
+  background-color: #9ea6c1ad;
+  right: 0;
 }
 
-.header{
-
-    width: 100%;
-    padding: 1%;
-    display: inline-block;
-    background-color: #1C256D;
-    color: #FFFFFF;
-    box-shadow: 0 0 1em #1c256d9a;
-
+.header {
+  width: 100%;
+  padding: 1%;
+  display: inline-block;
+  background-color: #1c256d;
+  color: #ffffff;
+  box-shadow: 0 0 1em #1c256d9a;
 }
 /*
 .container{
@@ -24,262 +20,324 @@ body {
 
 }
 */
-.col{
-
-    margin: 0;
-
+.col {
+  margin: 0;
 }
 .config {
-
-    text-decoration: none;
-
+  text-decoration: none;
 }
 .titulo {
-
-    height: 25px;
-    padding-left: 41%;
-    text-align: start;
-
+  height: 25px;
+  padding-left: 41%;
+  text-align: start;
 }
-.text{
-
-    text-align: center;
-    padding-top: 10%;
-
+.text {
+  text-align: center;
+  padding-top: 10%;
 }
 .user {
-
-    text-decoration: none;
-    margin: 0;
-    padding-left: 20%;
-
+  text-decoration: none;
+  margin: 0;
+  padding-left: 20%;
 }
 
 .configlogo {
-
-    padding-left: 20%;
-    height: 200px;
-    justify-content: right;
-
+  padding-left: 20%;
+  height: 200px;
+  justify-content: right;
 }
 form {
-
-    width: 65%;
-    margin-left: 25%;
-    font-family: Cairo;;
-    margin-bottom: 3%;
-
+  width: 65%;
+  margin-left: 25%;
+  font-family: Cairo;
+  margin-bottom: 3%;
 }
-form label{
-
-    color: #0D0C61;
-    position: absolute;
-
+form label {
+  color: #0d0c61;
+  position: absolute;
 }
 form input {
-
-    background-color: #ced8eb;
-    border-radius: 5px;
-    border: none;
-    box-sizing: border-box;
-    width: 550px;
-    height: 45px;
-
+  background-color: #ced8eb;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  width: 550px;
+  height: 45px;
 }
 .editar {
-
-    cursor: pointer;
-    width: 15%;
-    height: 45px;
-    border-radius: 5px;
-    color:#FFFFFF;
-    background-color: #1C256D;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0 25px;
-
+  cursor: pointer;
+  width: 15%;
+  height: 45px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #1c256d;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 25px;
 }
 form small {
-
-    margin-bottom: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
 }
-.confirma{
-
-    padding: 0%;
-
+.confirma {
+  padding: 0%;
 }
 .check-button {
-
-    cursor: pointer;
-    width: 35%;
-    height: 65px;
-    border-radius: 10px;
-    color:#FFFFFF;
-    background-color: #753354;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  cursor: pointer;
+  width: 35%;
+  height: 65px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #753354;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .delete {
-
-    width: 55%;
-    height: 65px;
-    padding: 2%;
-    color: #0D0C61;
-    text-decoration: none;
-
+  width: 55%;
+  height: 65px;
+  padding: 2%;
+  color: #0d0c61;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.container-modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal {
+  width: 40vw;
+  height: 40vh;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f9fbff;
+  border: 0.5px solid #2b3d99;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.modal p {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #606060;
+}
+
+.modal-close {
+  padding: 7px;
+  border-bottom: 0.4px solid #606060;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close i {
+  font-style: normal;
+  color: gray;
+  cursor: pointer;
+}
+
+.modal-close i:hover {
+  color: #ad2647;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.btnDelete {
+  padding: 10px;
+  border-radius: 10px;
+  background: #ad2647;
+  color: #fff;
+  font-family: "Cairo", sans-serif;
+  cursor: pointer;
+}
+
+.btnCancel {
+  padding: 10px;
+  border-radius: 10px;
+  background: #2b3d99;
+  color: #fff;
+  font-family: "Cairo", sans-serif;
+  cursor: pointer;
+}
+
+.modal.active {
+  display: flex;
+  width: 40vw;
+  height: 40vh;
+  /* display: none; */
+  top: auto;
+  left: auto;
+}
+
+.container-modal.active {
+  display: flex;
+}
+
 @media only screen and (max-width: 1255px) {
-    header{
-        width: auto;
-    }
+  header {
+    width: auto;
+  }
 }
 @media only screen and (max-width: 768px) {
-    header{
-        width: 100%;
-    }
-    .titulo{
-        padding-left: 31%;
-    }
-    .text{
-        width: 85%;
-    }
-    .configlogo{
-        padding-left: 15%;
-        height: 150px;
-    }
-    form{
-        width: 80%;
-        margin-right: 25%;
-        margin: 0 15%;
-    }
-    form input{
-        width: 450px;
-    }
-    .editar{
-        width: 25%;
-    }
+  header {
+    width: 100%;
+  }
+  .titulo {
+    padding-left: 31%;
+  }
+  .text {
+    width: 85%;
+  }
+  .configlogo {
+    padding-left: 15%;
+    height: 150px;
+  }
+  form {
+    width: 80%;
+    margin-right: 25%;
+    margin: 0 15%;
+  }
+  form input {
+    width: 450px;
+  }
+  .editar {
+    width: 25%;
+  }
 }
 @media only screen and (max-width: 670px) {
-    header{
-        width: 100%;
-    }
-    .text{
-        width: 85%;
-        height: 35px;
-        text-align: start;
-    }
-    form{
-        width: 85%;
-        margin-right: 20%;
-    }
-    form input{
-        width: 350px;
-    }
-    .editar{
-        width: 25%;
-    }
-    .check-button{
-        width: 45%;
-    }
-    .delete{
-        width: 65%;
-        height: 75px;
-    }
+  header {
+    width: 100%;
+  }
+  .text {
+    width: 85%;
+    height: 35px;
+    text-align: start;
+  }
+  form {
+    width: 85%;
+    margin-right: 20%;
+  }
+  form input {
+    width: 350px;
+  }
+  .editar {
+    width: 25%;
+  }
+  .check-button {
+    width: 45%;
+  }
+  .delete {
+    width: 65%;
+    height: 75px;
+  }
 }
 @media only screen and (max-width: 476px) {
-    header{
-        width: 100%;
-    }
-    .titulo{
-        padding-left: 15%;
-        height: 20px;
-    }
-    .user{
-        padding: 0;
-    }
-    .text{
-        width: 75%;
-        height: 15px;
-        text-align: start;
-    }
-    .configlogo{
-        height: 130px;
-    }
-    form{
-        width: 85%;
-        margin-right: 20%;
-        margin: 0 15%;
-    }
-    form input{
-        width: 300px;
-        height: 40px;
-    }
-    .editar{
-        width: 20%;
-        height: 40px;
-    }
-    .check-button{
-        width: 50%;
-        height: 55px;
-    }
-    .delete{
-        width: 65%;
-        height: 75px;
-    }
+  header {
+    width: 100%;
+  }
+  .titulo {
+    padding-left: 15%;
+    height: 20px;
+  }
+  .user {
+    padding: 0;
+  }
+  .text {
+    width: 75%;
+    height: 15px;
+    text-align: start;
+  }
+  .configlogo {
+    height: 130px;
+  }
+  form {
+    width: 85%;
+    margin-right: 20%;
+    margin: 0 15%;
+  }
+  form input {
+    width: 300px;
+    height: 40px;
+  }
+  .editar {
+    width: 20%;
+    height: 40px;
+  }
+  .check-button {
+    width: 50%;
+    height: 55px;
+  }
+  .delete {
+    width: 65%;
+    height: 75px;
+  }
 }
 @media only screen and (max-width: 376px) {
-    * {
-        font-size: small;
-    }
-    body{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-    .text{
-        width: 55%;
-        font-size: 135% ;
-        text-align: start;
-    }
-    .configlogo{
-        height: 100px;
-    }
-    form{
-        width: 75%
-    }
-    form input{
-        width: 60%;
-        height: 30px;
-    }
-    .editar{
-        width: 21%;
-        height: 85%;
-    }
-    .check-button{
-        text-align: center;
-    }
-    .delete{
-        text-align: center;
-    }
+  * {
+    font-size: small;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  .text {
+    width: 55%;
+    font-size: 135%;
+    text-align: start;
+  }
+  .configlogo {
+    height: 100px;
+  }
+  form {
+    width: 75%;
+  }
+  form input {
+    width: 60%;
+    height: 30px;
+  }
+  .editar {
+    width: 21%;
+    height: 85%;
+  }
+  .check-button {
+    text-align: center;
+  }
+  .delete {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 320px) {
-    header{
-        width: 100%;
-    }
-    form{
-        width: 70%
-    }
-    form input{
-        width: 55%;
-        height: 30px;
-    }
+  header {
+    width: 100%;
+  }
+  form {
+    width: 70%;
+  }
+  form input {
+    width: 55%;
+    height: 30px;
+  }
 }

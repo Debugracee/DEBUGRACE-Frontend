@@ -9,6 +9,25 @@ const btnEmail = document.getElementById("btnEmail");
 const btnData = document.getElementById("btnData");
 const btnGender = document.getElementById("btnGender");
 const btnSenha = document.getElementById("btnSenha");
+const btnSave = document.getElementById("btnSalvar");
+const btnDelete = document.getElementById("btnDelete");
+const deleteUser = document.getElementById("delete");
+
+const containerModal = document.getElementById("container-modal");
+const modal = document.getElementById("modal");
+const cancelAction = document.querySelector(".btnCancel");
+const x = document.getElementById("x");
+console.log("lalalalala");
+// funcao ativar modal deletar usuario
+const activeModal = () => {
+  modal.classList.toggle("active");
+  containerModal.classList.toggle("active");
+};
+
+const disableModal = () => {
+  modal.classList.remove("active");
+  containerModal.classList.remove("active");
+};
 
 btnNome.addEventListener("click", () => {
   mudarNome.removeAttribute("disabled");
@@ -38,7 +57,9 @@ if (tokenObject === null) {
   fetch("http://localhost:3500/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
-    body: JSON.stringify({ email: usuarioObject.email || usuarioAlteradoObject.email }),
+    body: JSON.stringify({
+      email: usuarioObject.email || usuarioAlteradoObject.email,
+    }),
   })
     .then((res) => res.json())
     .then((res) => {
@@ -55,7 +76,7 @@ if (tokenObject === null) {
         const logoutButton = document.querySelector("#item2");
 
         configElement.innerHTML = "CONFIGURAÇÕES";
-        configElement.href = '/configuracoes';
+        configElement.href = "/configuracoes";
 
         logoutButton.innerHTML = "SAIR";
         logoutButton.removeAttribute("href");
@@ -80,8 +101,38 @@ if (tokenObject === null) {
     });
 }
 
-const btnSave = document.getElementById("btnSalvar");
-const btnDelete = document.getElementById("btnSalvar");
+btnDelete.addEventListener("click", () => {
+  console.log("ta pegando trouxa");
+  activeModal();
+  containerModal.addEventListener("click", (e) => {
+    const elementRemoveModal = e.target.classList[0];
+    const classRemoveModal = ["container-modal", "btnCancel", "x"];
+    const closeModal = classRemoveModal.some(
+      (classRemoveModal) => classRemoveModal === elementRemoveModal
+    );
+    console.log(elementRemoveModal);
+    if (closeModal) {
+      disableModal();
+    }
+  });
+
+  deleteUser.addEventListener("click", () => {
+    fetch(`http://localhost:3500/usuario/${usuarioObject.id}`, {
+      method: "DELETE",
+      headers: { "Content-type": "application/json" }
+    }).then((res) =>
+      res.json()
+    );
+    localStorage.removeItem("token");
+    localStorage.removeItem("usuario");
+    window.location.assign("http://localhost:5000/cadastro");
+  });
+  // quando clicar no botao chamar o modal
+  // nele vai ter a opcao de cancelar e excluir
+  // quando clicar em "dizer adeus", fazer o fetch
+
+  // por enquanto deixar assim, mas pretendo colocar mensagem avisando que o usuario foi excluido
+});
 
 btnSave.addEventListener("click", () => {
   fetch(`http://localhost:3500/usuario/${usuarioObject.id}`, {
@@ -102,7 +153,7 @@ btnSave.addEventListener("click", () => {
         "usuarioAtualizado",
         JSON.stringify(usuarioAtualizado)
       );
-      localStorage.removeItem("usuario")
+      localStorage.removeItem("usuario");
       const usuarioAlterado = localStorage.getItem("usuarioAtualizado");
       const usuarioAlteradoObject = JSON.parse(usuarioAlterado);
       mudarNome.value = usuarioAlteradoObject.nome;
@@ -116,4 +167,6 @@ btnSave.addEventListener("click", () => {
   // fazer validacao onde se nao houver token, ele vai chamar a rota de deslog
   // pego o storage do usuario e colocar cada atributo do usuario atual dentro dele
   // localstorage.nome = usuarioAtualizado.nome -- sla acho que da bom(seguir essa logica)
+
+  // criar um js para o modal e exportar a funcao para ativar ele e desativar
 });
