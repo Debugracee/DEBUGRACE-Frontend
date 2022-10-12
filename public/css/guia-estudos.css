@@ -95,29 +95,35 @@ body {
 .btn-title {
     display: flex;
     justify-content: space-between;
-    width: 88vw;
+    width: 87vw;
     align-items: center;
     padding: 7px 0;
 }
 
 .btn-title img {
-    width: 260px;
+    width: 18rem;
 }
 
 #content-cicloBasico {
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
     display: none;
     flex-direction: column;
     justify-content: center;
     width: 70vw;
     align-items: center;
+    text-align: justify;
     padding: 5px;
     visibility: hidden;
 }
 
 #content-frontEnd{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
     display: none;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
     width: 70vw;
     align-items: center;
     padding: 5px;
@@ -125,9 +131,12 @@ body {
 }
 
 #content-backEnd{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
     display: none;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
     width: 70vw;
     align-items: center;
     padding: 5px;

@@ -25,7 +25,7 @@ const tokenObject = JSON.parse(token)
 console.log(tokenObject)
 if(tokenObject === null) {
   window.location.assign("http://localhost:5000/login")
-}
+} 
 
 fetch("http://localhost:3500/trilhas")
   .then((res) => res.json())
@@ -65,6 +65,7 @@ fetch("http://localhost:3500/trilhas")
         title.innerHTML = trilha.conteudo;
         p.innerHTML = trilha.descConteudo;
         a.href = trilha.pdfConteudo;
+      
         // const id = li.id = trilha.id
 
         // function activeContent() {
@@ -90,4 +91,4 @@ fetch("http://localhost:3500/trilhas")
         // pegar com className a div com o texto e ancora e agregar desc e conteudo
         // colocar essas divs dentro do elemento li e colocar o elemento li dentro do elemento ul
       });
-  });
+});
