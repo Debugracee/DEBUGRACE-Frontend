@@ -6,10 +6,6 @@
     background-color: #BDC2D4;
 }
 
-a {
-    color: none;
-}
-
 main {
     border-radius: 1px;
     display: flex;
@@ -126,7 +122,6 @@ main {
     align-items: center;
     justify-content: space-between;
     margin: 1em;
-    border: 1px solid;
     border-radius: 5px;
 }
 
@@ -134,14 +129,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
 }
 
 .colaboradores-final {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
 }
 
 
@@ -276,9 +269,9 @@ main {
         color: #1d1855;
     }
 
-.titulo-equipe {
-    order: 0;
-}
+    .titulo-equipe {
+        order: 0;
+    }
 
     .colaboradores-inicial {
         flex-direction: column;
@@ -300,17 +293,17 @@ main {
         justify-content: center;
     }
 
-.container-colaborador-azul{
-    height: 65vh;
-    width: 85vw;
-    margin: 3em;
-}
+    .container-colaborador-azul {
+        height: 65vh;
+        width: 85vw;
+        margin: 3em;
+    }
 
-.info-mais {
-    height: 33vh;
-    width: 100%;
-    margin: 1rem;
-}
+    .info-mais {
+        height: 33vh;
+        width: 100%;
+        margin: 1rem;
+    }
 
 }
 
@@ -319,25 +312,25 @@ main {
     .conheca {
         font-size: 60px;
     }
-    
-    
+
+
     .debugrace {
         font-size: 80px;
 
     }
-    
+
     .container-colaborador {
         height: 65vh;
         width: 40vw;
         background: #961f3d;
     }
-    
+
     .container-colaborador-azul {
         height: 65vh;
         width: 40vw;
         margin: 2rem;
     }
-    
+
     .colaboradores-inicial {
         flex-direction: row;
         margin: 2rem;
@@ -351,13 +344,13 @@ main {
         width: 40vw;
         background: #961f3d;
     }
-    
+
     .container-colaborador-azul {
         height: 65vh;
         width: 40vw;
         margin: 2rem;
     }
-    
+
     .colaboradores-inicial {
         flex-direction: row;
         margin: 2rem;

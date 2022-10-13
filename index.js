@@ -49,7 +49,7 @@ app.get("/guia-estudos/ciclo-basico", (req, res) => {
   res.render("ciclo-basico")
 
 
-
+//let o = 0
 
 //   const authHeader = req.headers["authorization"];
 //   const token = authHeader && authHeader.split("  ")[1]; 
