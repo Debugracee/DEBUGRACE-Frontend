@@ -4,6 +4,24 @@ const btnFrontEnd = document.getElementById("btn-frontEnd");
 const contentFrontEnd = document.getElementById("content-frontEnd");
 const btnBackEnd = document.getElementById("btn-backEnd");
 const contentBackEnd = document.getElementById("content-backEnd");
+const routerCicloBasico = document.getElementById("routerCicloBasico");
+const routerFrontEnd = document.getElementById("routerFrontEnd");
+const routerBackEnd = document.getElementById("routerBackEnd");
+const pageLogin = document.getElementById("btnLogin");
+const textModal = document.querySelector(".textModal")
+const containerModal = document.getElementById("container-modal");
+const modal = document.getElementById("modal");
+const pageRegister = document.querySelector(".btnRegister");
+// funcao ativar modal deletar usuario
+const activeModal = () => {
+  modal.classList.toggle("active");
+  containerModal.classList.toggle("active");
+};
+
+const disableModal = () => {
+  modal.classList.remove("active");
+  containerModal.classList.remove("active");
+};
 
 function activeContentCicloBasico() {
   contentCicloBasico.classList.toggle("active");
@@ -11,7 +29,9 @@ function activeContentCicloBasico() {
   console.log("funcionou");
 }
 
-btnCicloBasico.addEventListener("click", activeContentCicloBasico);
+btnCicloBasico.addEventListener("click", (e) => {
+  activeContentCicloBasico();
+});
 
 function activeContentFrontEnd() {
   contentFrontEnd.classList.toggle("active");
@@ -35,6 +55,50 @@ const usuario = localStorage.getItem("usuario");
 const token = localStorage.getItem("token");
 const tokenObject = JSON.parse(token);
 console.log(tokenObject);
+
+routerCicloBasico.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Ciclo Básico?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "http://localhost:5000/guia-estudos/ciclo-basico"
+    );
+  }
+})
+
+routerFrontEnd.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Front-End?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "http://localhost:5000/guia-estudos/front-end"
+    );
+  }
+})
+
+routerBackEnd.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Back-End?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "http://localhost:5000/guia-estudos/back-end"
+    );
+  }
+})
+
+containerModal.addEventListener("click", (e) => {
+  const clickClass = e.target.classList[0]
+  const classRemoveModal = ["container-modal", "x"]
+  const closeModal = classRemoveModal.some(classRemoveModal => classRemoveModal === clickClass)
+  if(closeModal) {
+      disableModal()
+  }
+});
+
 const usuarioObject = JSON.parse(usuario);
 fetch("http://localhost:3500/status", {
   method: "POST",
@@ -74,4 +138,3 @@ fetch("http://localhost:3500/status", {
       // editar estilização das tags (usuario logado)
     }
   });
-//   });
