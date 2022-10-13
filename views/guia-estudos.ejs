@@ -38,7 +38,7 @@
                 Aqui estão conteúdos que achamos muito importante um programador ter como base, onde o mais importante é aprender e desenvolver sua lógica, é onde você irá perceber que não importe a linguagem de programação, 
                 pois os conteúdos a serem estudados não mudam independente da linguagem, você irá pensar muito mais que codar. Esse guia também serve caso queira reestudar algum assunto ou se aprofundar, algo muito comum, pois não somos banco de dados infinitos.
             </p>
-           <a href="/guia-estudos/ciclo-basico"> Acesssar conteúdos</a>
+           <a id="routerCicloBasico" class="routerFrontEnd"> Acesssar conteúdos</a>
         </div>
         </button>
 
@@ -56,7 +56,7 @@
                 criaremos o esqueleto do site, o css irá estilizar ele, deixar mais bonito, e o javascript irá tornar o site dinâmico, pois apenas com HTML e CSS criamos um site
                 estático. E temos alguns frameworks, criados para facilitar o desenvolvimento, como o bootstrap e react.
             </p>
-            <a href="/guia-estudos/front-end"> Acesssar conteúdos</a>
+            <a id="routerFrontEnd" class="routerFrontEnd"> Acesssar conteúdos</a>
         </div>
         </button>
 
@@ -72,12 +72,26 @@
                     Em tradução literal, backend significa processamento interno, ou seja, é nele que desenvolvemos o código que conecta a internet com o banco de dados, gerencia as conexões 
                     dos usuários, crias as rotas (links ou url para poderem acessar o site) e alimenta a aplicação web. É onde o servidor responderá às requisições do cliente feitas.
                 </p>
-           <a href="/guia-estudos/back-end"> Acesssar conteúdos</a>
+           <a class="routerBackEnd" id="routerBackEnd"> Acesssar conteúdos</a>
         </div>
         </button>
 
         <br><br><br>
     </main>
+
+    <div id="container-modal" class="container-modal">
+        <div id="modal" class="modal">
+            <div class="modal-close">
+                <i id="x" class="x fa-solid fa-xmark fa-3x"></i></i>
+            </div>
+            <p class="textModal">
+            </p>
+            <div class="btns">
+                <a id="login" class="btnLogin" href="/login"> Ja possui um login? 🙂</a> 
+                <a class="btnRegister" href="/cadastro"> Não possui cadastro?😭</a>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/guia-estudos.js"></script>
