@@ -6,6 +6,10 @@
     background-color: #BDC2D4;
 }
 
+a {
+    color: none;
+}
+
 main {
     border-radius: 1px;
     display: flex;
