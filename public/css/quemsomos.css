@@ -1,0 +1,362 @@
+.corpo {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #BDC2D4;
+}
+
+main {
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1C256D;
+    height: 50vh;
+    padding-top: 6em;
+}
+
+.conheca {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 70px;
+    transition: all 300ms ease;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.conheca:hover {
+    transition: all 300ms ease;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+}
+
+.debugrace {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 90px;
+    transition: all 300ms ease;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.debugrace:hover {
+    transition: all 300ms ease;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+}
+
+.borda {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 10%;
+    border: 0.001em solid #4854B0;
+}
+
+.container-quem-somos {
+    display: flex;
+    padding: 3em;
+}
+
+.card1 {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 50%;
+}
+
+.card1 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.card2-info {
+    width: 50%;
+    font-size: 21px;
+    text-align: justify;
+    color: #1d1855;
+}
+
+.equipe {
+    display: flex;
+    padding: 3em;
+}
+
+.equipe-sobre {
+    order: 0;
+    width: 50%;
+    font-size: 21px;
+    text-align: justify;
+    color: #1d1855;
+}
+
+.titulo-equipe {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.titulo-equipe p {
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+
+.container-colaboradores {
+    margin: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    color: #FFFFFF;
+
+}
+
+.colaboradores-inicial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.colaboradores-meio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+}
+
+.colaboradores-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+
+.container-colaborador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    height: 65vh;
+    width: 30vw;
+    background: #961f3d;
+    box-shadow: -15px -15px #64031B;
+    border-radius: 5px;
+}
+
+.container-colaborador-azul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    height: 65vh;
+    width: 30vw;
+    background: #404A9B;
+    box-shadow: -15px -15px #142079;
+    border-radius: 5px;
+}
+
+.colaborador1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gato {
+    width: 40%;
+    border: 1px solid #1C256D;
+    border-radius: 90px;
+}
+
+.maria-nome {
+    text-align: center;
+    font-weight: bold;
+}
+
+.maria-info {
+    padding: 1em;
+    text-align: justify;
+}
+
+.mais-informacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-mais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 60%;
+    background: #961f3d;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.info-mais-texto {
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 2em;
+    color: #FFFFFF;
+}
+
+/*///// MOBILE ///////////////////*/
+
+@media (min-width: 300px) and (max-width: 750px) {
+    main {
+        height: 50vh;
+    }
+
+    .conheca {
+        font-size: 36px;
+    }
+
+    .debugrace {
+        font-size: 56px;
+    }
+
+    .container-quem-somos {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .card1 {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .card2-info {
+        width: 100%;
+        font-size: 21px;
+        text-align: justify;
+        color: #1d1855;
+    }
+
+    .card2-info p {
+        text-align: center;
+    }
+
+    .borda {
+        visibility: visible;
+        width: 90%;
+        margin-bottom: 1em;
+    }
+
+
+    .equipe {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .equipe-sobre {
+        order: 1;
+        width: 100%;
+        font-size: 21px;
+        text-align: justify;
+        color: #1d1855;
+    }
+
+.titulo-equipe {
+    order: 0;
+}
+
+    .colaboradores-inicial {
+        flex-direction: column;
+    }
+
+    .container-colaborador {
+        height: 65vh;
+        width: 85vw;
+        margin: 3em;
+    }
+
+    .colaboradores-meio {
+        width: 100%;
+
+    }
+
+    .colaboradores-final {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+.container-colaborador-azul{
+    height: 65vh;
+    width: 85vw;
+    margin: 3em;
+}
+
+.info-mais {
+    height: 33vh;
+    width: 100%;
+    margin: 1rem;
+}
+
+}
+
+@media (min-width: 751px) and (max-width: 1000px) {
+
+    .conheca {
+        font-size: 60px;
+    }
+    
+    
+    .debugrace {
+        font-size: 80px;
+
+    }
+    
+    .container-colaborador {
+        height: 65vh;
+        width: 40vw;
+        background: #961f3d;
+    }
+    
+    .container-colaborador-azul {
+        height: 65vh;
+        width: 40vw;
+        margin: 2rem;
+    }
+    
+    .colaboradores-inicial {
+        flex-direction: row;
+        margin: 2rem;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+    .container-colaborador {
+        height: 65vh;
+        width: 40vw;
+        background: #961f3d;
+    }
+    
+    .container-colaborador-azul {
+        height: 65vh;
+        width: 40vw;
+        margin: 2rem;
+    }
+    
+    .colaboradores-inicial {
+        flex-direction: row;
+        margin: 2rem;
+    }
+
+}

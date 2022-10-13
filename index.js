@@ -37,6 +37,11 @@ app.get("/guia-estudos", (req, res) => {
   res.render("guia-estudos");
 });
 
+app.get("/quem-somos", (req, res) => {
+  res.render("quem-somos");
+});
+
+
 app.get("/guia-estudos/ciclo-basico", (req, res) => {
   // let usuario = require("../../model/usuarios");
   // const usuarios = await usuario.findAll();
