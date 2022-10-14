@@ -104,7 +104,7 @@ header img{
 }
 
 .painel-text img {
-  width: 27vw;
+  width: 60rem;
 }
 
 .painel-text p {
@@ -113,11 +113,11 @@ header img{
 }
 
 .painel-img {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .painel-img img {
-  width: 35vw;
+  width: 30vw;
   height: 40vh;
 }
 

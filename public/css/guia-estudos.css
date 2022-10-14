@@ -63,7 +63,7 @@ body {
 }
 
 .painel-img img {
-    width: 30vw;
+    width: vw;
     height: 40vh;
 }
 
@@ -75,10 +75,16 @@ body {
     margin-bottom: 40px;
 }
 
+.seta{
+    font-size: 2.5rem;
+    color:#232e86;
+    cursor: pointer;
+}
+
 .content-page button {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 80vw;
     max-width: 90vw;
     margin-top: 40px;
     background-color: #F9FBFF;
@@ -95,17 +101,14 @@ body {
 .btn-title {
     display: flex;
     justify-content: space-between;
-    width: 87vw;
+    width: 77vw;
     align-items: center;
     padding: 7px 0;
 }
 
-.btn-title img {
-    width: 18rem;
-}
-
 #content-cicloBasico {
     font-family: 'Cairo', sans-serif;
+    color:#1C256D;
     font-weight: bold;
     display: none;
     flex-direction: column;
@@ -119,6 +122,7 @@ body {
 
 #content-frontEnd{
     font-family: 'Cairo', sans-serif;
+    color:#1C256D;
     font-weight: bold;
     display: none;
     flex-direction: column;
@@ -132,6 +136,7 @@ body {
 
 #content-backEnd{
     font-family: 'Cairo', sans-serif;
+    color:#1C256D;
     font-weight: bold;
     display: none;
     flex-direction: column;
@@ -152,11 +157,17 @@ body {
 }
 
 .content-page div a {
+    color:#e5ecfb;
+    border-radius: 4px;
     font-family: 'Cairo', sans-serif;
-    padding: 5px 5px;
+    padding: 10px 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    background-color:#ad2647;
+    border: 100px #1C256D;
 }
 
 

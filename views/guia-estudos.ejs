@@ -20,7 +20,7 @@
     <section class="painel">
             <div class="painel-text">
                 <img src="svg/guia-estudos.svg" alt="guia-estudos(title)"><br>
-                    <p> Ele possui conteúdos organizados em trilhas de conhecimentos fundamentais para um programador </p>
+                    <p style="font-size: 1.4rem"> Aqui é onde estão os conteúdos organizados em trilhas de conhecimentos fundamentais para um programador.</p>
             </div>
                 <div class="painel-img">
                     <img src="svg/headerGUIAS.svg">
@@ -30,7 +30,8 @@
     <main class="content-page">
         <button id="btn-cicloBasico"> 
           <div class="btn-title"> 
-              <img src="svg/guia-basico.svg" alt="guia-basico">
+              <img style="width: 15rem;"  src="svg/guia-basico.svg" alt="guia-basico">
+              <i id="seta" class="fa-regular fa-circle-down seta"></i>
         </div> 
         <div id="content-cicloBasico"> 
             <p>Conteúdos abordados: lógica de programação, programação orientada a objetos, estrutura de dados, GIT e linha de comando.</p>
@@ -38,8 +39,8 @@
                 Aqui estão conteúdos que achamos muito importante um programador ter como base, onde o mais importante é aprender e desenvolver sua lógica, é onde você irá perceber que não importe a linguagem de programação, 
                 pois os conteúdos a serem estudados não mudam independente da linguagem (o que pode mudar é a sintaxe da linguagem, como declarar variáveis por exemplo, mas é algo que você pode aprender rapidamente olhando a documentação, pois o conceito de variável a igual para qualquer linguagem),
                 você irá pensar muito mais que codar. Esse guia também serve caso queira reestudar algum assunto ou se aprofundar, algo muito comum, pois não somos banco de dados infinitos.
-            </p>
-           <a href="/guia-estudos/ciclo-basico"> Acesssar conteúdos</a>
+            </p><br>
+           <a class="acesso" href="/guia-estudos/ciclo-basico">Clique aqui para acesssar os conteúdos</a>
         </div>
         </button>
 
@@ -47,7 +48,8 @@
 
         <button id="btn-frontEnd"> 
             <div class="btn-title">
-                <img src="svg/guia-frontend.svg" alt="guia-basico">
+                <img style="width: 17rem;" src="svg/guia-frontend.svg" alt="guia-basico">
+                <i id="seta" class="fa-regular fa-circle-down seta"></i>
         </div>
 
         <div id="content-frontEnd"> 
@@ -56,8 +58,8 @@
                 Frontend é a parte onde desenvolvemos a interface gráfica da nossa aplicação (a parte visual), onde o usuário irá interagir, como apertar um botão, por exemplo. Com o html
                 criaremos o esqueleto do site, o css irá estilizar ele, deixar mais bonito, e o javascript irá tornar o site dinâmico, pois apenas com HTML e CSS criamos um site
                 estático. E temos alguns frameworks, criados para facilitar o desenvolvimento, como o bootstrap e react.
-            </p>
-            <a href="/guia-estudos/front-end"> Acesssar conteúdos</a>
+            </p><br>
+            <a class="acesso" href="/guia-estudos/front-end"> Clique aqui para acesssar os conteúdos</a>
         </div>
         </button>
 
@@ -65,19 +67,21 @@
 
         <button id="btn-backEnd">
             <div class="btn-title">
-            <img src="svg/guia-backend.svg" alt="guia-basico">
+            <img style="width: 17rem;" src="svg/guia-backend.svg" alt="guia-basico">
+            <i id="seta" class="fa-regular fa-circle-down seta"></i>
         </div>
         <div id="content-backEnd"> 
                 <p>Conteúdos abordados: .</p>
                 <p>
                     Em tradução literal, backend significa processamento interno, ou seja, é nele que desenvolvemos o código que conecta a internet com o banco de dados, gerencia as conexões 
                     dos usuários, crias as rotas (links ou url para poderem acessar o site) e alimenta a aplicação web. É onde o servidor responderá às requisições do cliente feitas.
-                </p>
-           <a href="/guia-estudos/back-end"> Acesssar conteúdos</a>
+                </p><br>
+           <a class="acesso" href="/guia-estudos/back-end">Clique aqui para acesssar os conteúdos</a>
         </div>
         </button>
 
         <br><br><br>
+
     </main>
 
     <div id="container-modal" class="container-modal">
