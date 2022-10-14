@@ -137,7 +137,42 @@ body{
 /*PARTE: RECURSOS*/
 
 /*PARTE: TORNANDO ELA RESPONSIVA*/
-
+@media(max-width: 768px){
+    .imagem{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+    .navbar-brand{
+        padding-top: 2.1rem;
+        padding-bottom: 2.1rem;
+    }
+    .frase{
+        width: 34rem;
+        margin-left: 5rem;
+        margin-top: 2rem;
+    }
+    .frase2{
+        text-align: center;
+    }
+    .frase4{
+        padding-bottom: 6rem;
+    }
+    .fraseE{
+        width: 50rem;
+        padding-right: 1rem;
+        font-size: 1.6rem;
+    }
+    .guiasEstudos{
+        margin: 6rem 9rem 1rem 13rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .clique{
+        padding: 9rem 2rem 5rem 1rem;
+        width: 49rem;
+    }
+}
 /* Botão Hamburguer, página mobile! */
 @media (max-width: 600px) {
     #menu {
