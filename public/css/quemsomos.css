@@ -242,12 +242,11 @@ main {
     .card2-info {
         width: 100%;
         font-size: 21px;
-        text-align: justify;
         color: #1d1855;
     }
 
     .card2-info p {
-        text-align: center;
+        text-align: justify;
     }
 
     .borda {
@@ -305,6 +304,10 @@ main {
         width: 100%;
         margin: 1rem;
     }
+
+.info-mais-texto {
+    font-size: 18px;
+}
 
 }
 
