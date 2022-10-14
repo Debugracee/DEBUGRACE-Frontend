@@ -58,7 +58,6 @@ console.log(tokenObject);
 
 routerCicloBasico.addEventListener("click", () => {
   if (!usuarioObject || !tokenObject) {
-
     textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Ciclo Básico?"
     activeModal();
   } else {
@@ -80,7 +79,7 @@ routerFrontEnd.addEventListener("click", () => {
 })
 
 routerBackEnd.addEventListener("click", () => {
-  if (!usuarioObject || !tokenObject) {
+  if (usuarioObject || tokenObject === null) {
     textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Back-End?"
     activeModal();
   } else {
