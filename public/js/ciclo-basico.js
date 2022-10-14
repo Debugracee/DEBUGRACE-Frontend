@@ -24,7 +24,7 @@ const token = localStorage.getItem("token");
 const tokenObject = JSON.parse(token);
 const usuarioObject = JSON.parse(token);
 console.log(tokenObject);
-if(!usuarioObject || !tokenObject) {
+if(usuarioObject || tokenObject === null) {
   window.location.assign("http://localhost:5000/login");
 } else {
   const configElement = document.querySelector("#item1");

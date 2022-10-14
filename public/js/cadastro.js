@@ -32,6 +32,11 @@ async function registerUsers() {
   })
     .then((res) => res.json())
     .then((res) => {
+      if (email.value.trim()) {
+        alertError(email, res.emailUsadoErro);
+      } else {
+        alertSuccess(email);
+      }
       if (res.usuario.id) {
         window.location.assign("http://localhost:5000/login");
       }
