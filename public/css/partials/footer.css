@@ -1,12 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
-* {
+.discord{
+    
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    background-color: #1C256D;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    border-color: #2F66A6;
+    width: 650px;
+    height: 2.5rem;
+
+}
+.discord a{
+
+    text-decoration: none;
+    color: #FFFF;
+    width: 200vh;
+
 }
 
-footer {
+footer{
+
     background-color: #1C256D;
+    font-family: 'Courier Prime';
+
+}
+.socialmedia ul{
+
+    display: flex;
+    justify-content: center;
+    padding-left: 0.9rem;
+
+}
+.socialmedia li{
+
+    list-style-type: none;
+    margin-right: 0.5rem;
+
+}
+.socialmedia i{
+
+    font-size: xx-large;
+    color: #E3E6FF;
+    justify-content: space-between;
+
+}
+.etc{
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+}
+.footer-logo{
+
+    width: 14vw;
+
+}
+.footer-logo img{
+
+    width: 12vw;
+    height: 5vh;
+    margin-left: 1rem;
+
+}
+.copyright{
+
+    width: 100%;
+    background-color: #060453;
+    color: #FFFF;
+    text-align: center;
+    font-size: small;
+    padding: 0.5rem;
+
 }
