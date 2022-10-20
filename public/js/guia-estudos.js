@@ -79,7 +79,7 @@ routerFrontEnd.addEventListener("click", () => {
 })
 
 routerBackEnd.addEventListener("click", () => {
-  if (usuarioObject || tokenObject === null) {
+  if (!usuarioObject || !tokenObject) {
     textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Back-End?"
     activeModal();
   } else {
@@ -109,10 +109,8 @@ fetch("http://localhost:3500/status", {
     const logado = res.statusLogado;
     const status = logado.statusLogin;
     console.log(status);
-    if (!status && !tokenObject) {
+    if (!status || !tokenObject) {
       window.location.assign("http://localhost:5000/guia-estudos");
-      window.location.assign("http://localhost:5000/configuracoes");
-
       // colocar a estilizacao "normal aqui"
     } else {
       console.log(logado);
@@ -125,12 +123,12 @@ fetch("http://localhost:3500/status", {
       logoutButton.innerHTML = "SAIR";
       logoutButton.removeAttribute("href");
       logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("token");
         fetch("http://localhost:3500/deslog", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify({ email: usuarioObject.email }),
         }).then((res) => res.json());
-        localStorage.removeItem("token");
         localStorage.removeItem("usuario");
         window.location.assign("http://localhost:5000/login");
       });

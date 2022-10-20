@@ -14,6 +14,7 @@ if (!usuarioObject || !tokenObject) {
   logoutButton.innerHTML = "SAIR";
   logoutButton.removeAttribute("href");
   logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("token")
     localStorage.removeItem("usuario");
     fetch("http://localhost:3500/deslog", {
       method: "POST",
@@ -40,51 +41,20 @@ fetch("http://localhost:3500/trilhas")
         const lista = document.getElementById("lista");
         lista.appendChild(li);
 
-        // const contentTitle = document.createElement("div");
+
         const title = document.createElement("h5");
-        // title.title = "../svg/logicaDeProgramacao.svg";
-        // contentTitle.appendChild(title);
         const text = document.createElement("div");
         text.classList.add("content-text");
-        // const p = document.querySelector("#text");
         const p = document.createElement("p");
-        // p.innerHTML = trilha.descricao;
-        // getId.appendChild(p)
-        // const a = document.querySelector("#link");
         const a = document.createElement("a");
         a.innerHTML = "Clique aqui para acessar o conteúdo";
-        // a.href = trilha.conteudo;
+        a.target = "_blank"
         text.appendChild(title);
         text.appendChild(p);
         text.appendChild(a);
-        // li.appendChild(contentTitle);
         li.appendChild(text);
         title.innerHTML = trilha.conteudo;
         p.innerHTML = trilha.descConteudo;
         a.href = trilha.pdfConteudo;
-        // const id = li.id = trilha.id
-
-        // function activeContent() {
-        //   const li = document.querySelector(".content");
-        //   for (var i = id; i < id.length; i++) {
-        //     console.log(i);
-        //     // more statements
-        //  }
-
-        // //   if(id){
-        // //     text.classList.toggle("active")
-        // //   li.classList.toggle("mudar");
-        // //   console.log("funcionou");
-        // // }
-        // }
-
-        // li.addEventListener("click", activeContent);
-        // preciso percorrer todo o elemento do button
-
-        // colocar dentro de li
-
-        // pegar com className a div com a imagem e colocar o titulo
-        // pegar com className a div com o texto e ancora e agregar desc e conteudo
-        // colocar essas divs dentro do elemento li e colocar o elemento li dentro do elemento ul
       });
   });

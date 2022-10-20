@@ -51,16 +51,17 @@ const usuarioObject = JSON.parse(usuario);
 const tokenObject = JSON.parse(token);
 console.log(tokenObject);
 
-if (tokenObject === null) {
+if (!usuarioObject || !tokenObject) {
   window.location.assign("http://localhost:5000/login");
 } else {
   fetch("http://localhost:3500/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
-      email: usuarioObject.email || usuarioAlteradoObject.email,
+      email: usuarioObject.email 
     }),
-  })
+  }) 
+  // || usuarioAlteradoObject.email,
     .then((res) => res.json())
     .then((res) => {
       const logado = res.statusLogado;
@@ -81,22 +82,22 @@ if (tokenObject === null) {
         logoutButton.innerHTML = "SAIR";
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
+          localStorage.removeItem("token");
           fetch("http://localhost:3500/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),
           }).then((res) => res.json());
-          localStorage.removeItem("token");
           localStorage.removeItem("usuario");
           window.location.assign("http://localhost:5000/login");
         });
         // editar estilização das tags (usuario logado)
 
-        mudarNome.value = usuarioObject.nome;
-        mudarEmail.value = usuarioObject.email;
-        // mudarNascimento.value = usuarioObject.nascimento
-        mudarGenero.value = usuarioObject.genero;
-        mudarSenha.value = usuarioObject.senha;
+        // mudarNome.value = usuarioObject.nome;
+        // mudarEmail.value = usuarioObject.email;
+        // // mudarNascimento.value = usuarioObject.nascimento
+        // mudarGenero.value = usuarioObject.genero;
+
       }
     });
 }

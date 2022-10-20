@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const logado = res.statusLogado;
       const status = logado.statusLogin;
       console.log(status);
-      if (!status && tokenObject === null) {
+      if (!status || !tokenObject) {
         window.location.assign("http://localhost:5000/pagina-inicial");
       } else {
         console.log(logado);
@@ -27,12 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
         logoutButton.innerHTML = "SAIR";
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
-          localStorage.removeItem("usuario");
+          localStorage.removeItem("token")
           fetch("http://localhost:3500/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),
           }).then((res) => res.json());
+          localStorage.removeItem("usuario");
           window.location.assign("http://localhost:5000/login");
         });
       }
