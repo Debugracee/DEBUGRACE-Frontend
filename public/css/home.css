@@ -11,17 +11,41 @@ body{
     background-color: #9ea6c1ad;
 }
 
+/*PRIMEIRO-HEADER*/
+.navbar-brand{
+    margin-top: 4vh;
+}
+
+.nav{
+    margin-top: 3vh;
+}
+
 /*SEGUNDO-HEADER*/
+.header2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 .cabecalho{
     background-color: #1C256D;
     padding-top: 2rem;
     box-shadow: 0 0 1em #1c256d9a;
 }
 
+.cab-frase{
+    order: 1;
+}
+
+.cab-imagem{
+    order: 0;
+}
+
 .frase{
     width: 35rem;
-    margin-left: 9rem;
+    margin-left: 8vh;
     margin-top: 2rem;
+    margin-bottom: 1vh;
+    margin-right: 16vh;
 }
 
 .frase2{
@@ -30,7 +54,7 @@ body{
     font-size: 1.3rem;
 }
 
-.imagem {width: 33rem; margin-left: 10rem;}
+.imagem {width: 33rem; margin-left: 0rem;}
 /*SEGUNDO-HEADER*/
 
 /*MOSTRANDO OS GUIAS DE ESTUDOS*/
@@ -172,70 +196,18 @@ body{
         padding: 9rem 2rem 5rem 1rem;
         width: 49rem;
     }
-}
-/* Botão Hamburguer, página mobile! */
-@media (max-width: 600px) {
-    #menu {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0px;
-        background-color: rgba(212, 84, 212, 0.533);
-        height: 0px;
-        transition: .6s;
-        z-index: 1000;
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-    #nav.active #menu {
-        display: flex;
-        height: calc(100vh - 70px);
-        visibility: visible;
-        overflow-y: auto;
-    }
-    #menu a {
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(212, 84, 212, 0.533);
-    }
-
-    #btn-mobile {
-        display: flex;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-    }
-
-    #hamburguer {
-        border-top: 2px solid;
-        width: 20px;
-    }
-
-    #hamburguer::after, #hamburguer::before {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-
-    #nav.active #hamburguer {
-        border-top-color: transparent;
-
-    }
-
-    #nav.active #hamburguer::after {
-        transform: rotate(135deg);
-        top: -7px;
-    }
-
-    #nav.active #hamburguer::before {
-        transform: rotate(-135deg);
-    }
+   .cardC, .cardD{
+        width: 134vh;
+   }
+   .fraseBb{
+    padding: 7vh;
+    
+   }
+   .objetivo{
+        z-index: 100000;
+   }
+   .header2{
+    display: flex;
+    justify-content: center;
+   }
 }
