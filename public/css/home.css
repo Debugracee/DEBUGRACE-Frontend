@@ -141,6 +141,7 @@ body{
    position: relative;
    bottom: 28rem;
    border-radius: 5rem;
+
 }
 
 .cards1, .cards2{
@@ -177,37 +178,51 @@ body{
         margin-left: 5rem;
         margin-top: 2rem;
     }
+    
     .frase2{
         text-align: center;
     }
+    
     .frase4{
         padding-bottom: 6rem;
     }
+    
     .fraseE{
         width: 50rem;
         padding-right: 1rem;
         font-size: 1.6rem;
     }
+    
     .guiasEstudos{
         margin: 6rem 9rem 1rem 13rem;
         padding: 2rem 2rem 2rem 2rem;
     }
+    
     .clique{
         padding: 9rem 2rem 5rem 1rem;
         width: 49rem;
     }
-   .cardC, .cardD{
+   
+    .cardC, .cardD{
         width: 134vh;
    }
+   
    .fraseBb{
-    padding: 7vh;
-    
+    padding: 7vh; 
    }
+   
    .objetivo{
         z-index: 100000;
    }
+   
    .header2{
     display: flex;
     justify-content: center;
    }
+
+   #listaGuias{
+    margin-right: 5vh;
+    margin-left: -7vh;
+    }
+    
 }
