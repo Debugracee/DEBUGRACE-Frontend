@@ -18,14 +18,22 @@ header{
 form{
     font-family: 'Cairo', sans-serif;
     box-sizing: border-box;
-    width: 600px;
-    height: auto;
+    width: 48vw;
+    height: 47vw;
     margin: 0 auto;
-    padding-top: 50px;
     background-color: #dfe9fb;
     border: solid 0.2rem #596590;
     border-radius: 10px;
     color: #010b4e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+form p {
+    font-size: 18px;
 }
 
 .login{
@@ -33,12 +41,10 @@ form{
     text-align: justify;
     position: relative;
 }
-.login small {
-    margin-bottom: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
+
+small {
+    font-size: 16px;
+    color: #ad2647;
 }
 .login label {
     position: absolute;
@@ -141,7 +147,7 @@ footer {
     }
 }
 
-@media (min-width: 200px) and (max-width: 850px){
+/* @media (min-width: 200px) and (max-width: 850px){
 
     header{
         display: flex;
@@ -190,4 +196,55 @@ footer {
         text-align: center;
         margin-right: 30px;
     }  
+} */
+
+@media (max-width: 1024px) {
+    form {
+        width: 48vw;
+        height: 57vw;
+    }
+}
+@media (max-width: 768px) {
+    form {
+        width: 60vw;
+        height: 75vw;
+    }
+}
+@media (max-width: 425px) {
+    form {
+        width: 86vw;
+        height: 96vh;
+    }
+
+    .escreva {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    form {
+    width: 95vw;
+    height: 95vh;
+
+    }
+}
+@media (max-width: 320px) {
+    form {
+        width: 95vw;
+        height: 90vh;
+    }
+
+    form h2 {
+        margin: 3px 0;
+    }
+
+    form p {
+        margin-top: 9px;
+        margin-bottom: 1rem;
+        font-size: 15px;
+    }
+
+    .escreva {
+        padding: 0.6rem;
+    }
 }

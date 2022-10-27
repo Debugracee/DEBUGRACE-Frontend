@@ -10,24 +10,6 @@ async function loginUsuario() {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 
-  email.addEventListener("keyup", function () {
-    if (email.value.trim() === "") {
-      alertError(email, "Seu email é obrigatório");
-    } else {
-      alertSuccess(email);
-    }
-  });
-
-  password.addEventListener("keyup", function () {
-    if (password.value.trim() === "") {
-      alertError(password, "Sua senha é obrigatória");
-    } else if (password.value.length < 8) {
-      alertError(password, "Sua senha deve conter no mínimo 8 caracteres");
-    } else {
-      alertSuccess(password);
-    }
-  });
-
   const user = {
     email: email.value.trim(),
     senha: password.value.trim(),
@@ -41,6 +23,10 @@ async function loginUsuario() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
+      if(res.erro) {
+        const msgErro = document.querySelector("#msgErro")
+        msgErro.innerHTML = res.erro
+      }
       const usuario = res.usuario;
       const token = res.token;
       console.log(usuario);
