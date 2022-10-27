@@ -22,14 +22,18 @@ header img{
     font-size: 1.1rem;
 }
 
-.nav-link {
-    font-family: 'Rubik', sans-serif;
+#item00, #item0, #item1, #item2 {
     color: rgb(228, 236, 252);
 }
 
-.nav-link:hover{
-    color:rgb(101, 109, 199)
+#item00:hover, #item0:hover, #item1:hover {
+    color:rgb(101, 109, 199);
 }
+
+.nav-link {
+    font-family: 'Rubik', sans-serif;
+}
+
 
 .entrar{
     border-radius: 0.2rem;
