@@ -95,27 +95,29 @@ header img {
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0 0 1rem #1c256d9a;
+  padding: 10px;
 }
 
 .painel-text {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  align-items: center;
   font-size: 1.3rem;
 }
 
 .painel-text img {
-  width: 27vw;
+  width: 33rem;
 }
 
 .painel-text p {
   font-family: "Cairo", sans-serif;
   color: #fff2e7;
+  text-align: justify;
 }
 
 .painel-img {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .painel-img img {
@@ -152,7 +154,11 @@ header img {
   height: 50vh;
   box-shadow: -12px -12px 0px #1c256d;
   align-items: center;
-  
+  transition: all 0.3s;
+}
+
+.content:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .btn-title {
@@ -170,10 +176,10 @@ header img {
 .content-text {
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 72vw;
   align-items: center;
   padding: 5px;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   height: 45vh;
   justify-content: space-around;
 }
@@ -182,22 +188,22 @@ header img {
   color: #363f82;
   font-weight: 700;
   font-family: "Cairo", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .content-text p {
-  margin-bottom: 1rem;
-  width: 70vw;
+  /* margin-bottom: 1rem; */
+  width: 65vw;
   font-family: "Cairo", sans-serif;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: #363f82;
   text-align: justify;
 }
 
 .content-text a {
   font-family: "Cairo", sans-serif;
-  padding: 14px 14px;
+  padding: 9px 8px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
@@ -208,10 +214,27 @@ header img {
   color: #efbad4;
   text-align: center;
   width: 30vw;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
+
 @media (max-width: 768px) {
+  .painel-img {
+    display: none;
+  }
+
+  .painel-text {
+    width: 80vw;
+  }
+
+  .painel-text img {
+    width: 30rem;
+  }
+
+  .painel-text p {
+    font-size: 16px;
+    width: 80vw;
+  }
   .content-page h3 {
     font-size: 20px;
   }
@@ -220,51 +243,76 @@ header img {
     font-size: 17px;
   }
   .content-text p {
-    font-size: 1.04rem;
+    font-size: 0.9rem;
   }
   .content-text a {
-    margin-top: 10px;
     width: 33vw;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 425px) {
+  .painel-text {
+    width: auto;
+    align-items: center;
+  }
+
+  .painel-text img {
+    width: 23rem;
+  }
+
+  .painel-text p {
+    font-size: 15px;
+    width: 85vw;
+  }
+
+  .content {
+    margin-top: 26px;
+  }
+
   .content-text h5 {
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .content-text p {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
   .content-text a {
-    margin-top: 5px;
-    width: 47vw;
+    width: 49vw;
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 375px) {
+  .painel-text p {
+    font-size: 13px;
+  }
+
+  .painel-text img {
+    width: 21rem;
+  }
   .content-page h3 {
     font-size: 18px;
   }
   .content-text p {
-    font-size: 0.78rem;
+    font-size: 0.67rem;
   }
   .content-text h5 {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .content-text a {
-    margin-top: 2px;
-    width: 51vw;
+    width: 54vw;
     font-size: 0.78rem;
   }
 }
 
 @media (max-width: 320px) {
+  .painel-text img {
+    width: 18rem;
+  }
   .content-text p {
-    font-size: 0.72rem;
+    font-size: 0.63rem;
   }
   .content-text h5 {
     font-size: 12px;
@@ -273,8 +321,7 @@ header img {
     font-size: 17px;
   }
   .content-text a {
-    margin-top: 0px;
-    width: 54vw;
+    width: 56vw;
     font-size: 0.7rem;
   }
 }
