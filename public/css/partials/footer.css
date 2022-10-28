@@ -4,13 +4,14 @@
 .info-discord {
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
 }
 
-.discord{
+.discord {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center;
     background-color: #1C256D;
     font-family: 'Cairo', sans-serif;
     text-align: center;
@@ -22,60 +23,79 @@
     height: 2.5rem;
 
 }
-.discord a{
+
+.discord a {
+    display: flex;
+    align-items: center;
 
     text-decoration: none;
     color: #FFFF;
-    width: 200vh;
+    width: 60%;
 
 }
 
-footer{
+footer {
 
     background-color: #1C256D;
     font-family: 'Courier Prime';
 
 }
-.socialmedia ul{
+
+.media-dad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmedia ul {
 
     display: flex;
     justify-content: center;
     padding-left: 0.9rem;
 
 }
-.socialmedia li{
+
+.socialmedia li {
 
     list-style-type: none;
     margin-right: 0.5rem;
 
 }
-.socialmedia i{
+
+.socialmedia i {
 
     font-size: xx-large;
     color: #E3E6FF;
     justify-content: space-between;
 
 }
-.etc{
+
+.etc {
 
     display: flex;
     justify-content: center;
     margin: 0;
 
 }
-.footer-logo{
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 14vw;
-
-}
-.footer-logo img{
-
-    width: 12vw;
-    height: 5vh;
     margin-left: 1rem;
 
 }
-.copyright{
+
+.footer-logo img {
+
+    width: 12vw;
+    height: 5vh;
+
+
+}
+
+.copyright {
 
     width: 100%;
     background-color: #060453;
@@ -84,4 +104,10 @@ footer{
     font-size: small;
     padding: 0.5rem;
 
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    .footer-logo img {
+        width: 25vw;
+    }
 }

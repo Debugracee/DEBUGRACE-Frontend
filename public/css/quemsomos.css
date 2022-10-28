@@ -13,7 +13,7 @@ main {
     justify-content: center;
     background: #1C256D;
     height: 50vh;
-    padding-top: 6em;
+    padding-top: 3em;
 
 }
 
@@ -122,8 +122,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1em;
-    border-radius: 5px;
 }
 
 .colaboradores-meio {
@@ -270,6 +268,8 @@ main {
     }
 
     .titulo-equipe {
+        width: 100%;
+        justify-content: flex-start;
         order: 0;
     }
 
@@ -339,6 +339,10 @@ main {
         flex-direction: row;
         margin: 2rem;
     }
+
+.info-mais-texto {
+    font-size: 20px ;
+}
 
 }
 
