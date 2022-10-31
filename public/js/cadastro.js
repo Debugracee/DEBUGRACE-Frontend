@@ -7,21 +7,11 @@ const date = document.getElementById("date");
 const gender = document.getElementById("gender");
 const password = document.getElementById("password");
 const button = document.getElementById("check");
-// const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-async function pegandoUsuarios() {
-  const fetchData = await fetch("http://localhost:3500/usuario");
-  console.log(fetchData);
-}
-
-pegandoUsuarios();
 
 async function registerUsers() {
   let newUser = {
     nome: nome.value.trim(),
     email: email.value.trim(),
-    nascimento: date.value.trim(),
-    genero: gender.value.trim(),
     senha: password.value.trim(),
   };
 
@@ -72,22 +62,6 @@ function checkEmail(email) {
     email
   );
 }
-
-date.addEventListener("keyup", function () {
-  if (date.value.trim() === "") {
-    alertError(date, "Sua idade é obrigatória");
-  } else {
-    alertSuccess(date);
-  }
-});
-
-gender.addEventListener("keyup", function () {
-  if (gender.value.trim() === "") {
-    alertError(gender, "Seu gênero é obrigatório");
-  } else {
-    alertSuccess(gender);
-  }
-});
 
 password.addEventListener("keyup", function () {
   if (password.value.trim() === "") {

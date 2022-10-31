@@ -1,13 +1,9 @@
 console.log("carregou");
 const mudarNome = document.getElementById("nome");
 const mudarEmail = document.getElementById("email");
-const mudarNascimento = document.getElementById("data");
-const mudarGenero = document.getElementById("gender");
 const mudarSenha = document.getElementById("password");
 const btnNome = document.getElementById("btnNome");
 const btnEmail = document.getElementById("btnEmail");
-const btnData = document.getElementById("btnData");
-const btnGender = document.getElementById("btnGender");
 const btnSenha = document.getElementById("btnSenha");
 const btnSave = document.getElementById("btnSalvar");
 const btnDelete = document.getElementById("btnDelete");
@@ -35,12 +31,7 @@ btnNome.addEventListener("click", () => {
 btnEmail.addEventListener("click", () => {
   mudarEmail.removeAttribute("disabled");
 });
-btnData.addEventListener("click", () => {
-  mudarNascimento.removeAttribute("disabled");
-});
-btnGender.addEventListener("click", () => {
-  mudarGenero.removeAttribute("disabled");
-});
+
 btnSenha.addEventListener("click", () => {
   mudarSenha.removeAttribute("disabled");
 });
@@ -142,27 +133,15 @@ btnSave.addEventListener("click", () => {
     body: JSON.stringify({
       nome: mudarNome.value.trim(),
       email: mudarEmail.value.trim(),
-      nascimento: mudarNascimento.value.trim(),
-      genero: mudarGenero.value.trim(),
       senha: mudarSenha.value,
     }),
   })
     .then((res) => res.json())
     .then((res) => {
       const usuarioAtualizado = res.usuarioAlterado;
-      localStorage.setItem(
-        "usuarioAtualizado",
-        JSON.stringify(usuarioAtualizado)
-      );
-      localStorage.removeItem("usuario");
-      const usuarioAlterado = localStorage.getItem("usuarioAtualizado");
-      const usuarioAlteradoObject = JSON.parse(usuarioAlterado);
-      mudarNome.value = usuarioAlteradoObject.nome;
-      mudarEmail.value = usuarioAlteradoObject.email;
-      // mudarNascimento.value = usuarioAlteradoObject.nascimento
-      mudarGenero.value = usuarioAlteradoObject.genero;
-      mudarSenha.value = usuarioAlteradoObject.senha;
-    });
+      console.log(usuarioAtualizado)
+      // mensagem dizendo para o usuario que as alteracoes foram salvas
+    }); 
   // quando altera o usuario, é preciso carregar um novo storage
   // alterar a lógiac das outras páginas para carregar quando tiver um usuario ou um usuario alterado
   // fazer validacao onde se nao houver token, ele vai chamar a rota de deslog
