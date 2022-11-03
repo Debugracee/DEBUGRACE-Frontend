@@ -1,5 +1,4 @@
 .corpo {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,13 +13,13 @@ main {
     background: #1C256D;
     height: 50vh;
     padding-top: 3em;
-
 }
 
 .conheca {
     color: #FFFFFF;
     text-align: center;
     font-size: 70px;
+    font-weight: 600;
     transition: all 300ms ease;
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
@@ -35,7 +34,8 @@ main {
 .debugrace {
     color: #FFFFFF;
     text-align: center;
-    font-size: 90px;
+    font-weight: 600;
+    font-size: 85px;
     transition: all 300ms ease;
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
@@ -77,9 +77,11 @@ main {
 .card2-info {
     width: 50%;
     font-size: 21px;
-    text-align: justify;
+    text-align: start;
     color: #1d1855;
 }
+
+
 
 .equipe {
     display: flex;
@@ -90,7 +92,7 @@ main {
     order: 0;
     width: 50%;
     font-size: 21px;
-    text-align: justify;
+    text-align: start;
     color: #1d1855;
 }
 
@@ -149,6 +151,20 @@ main {
     box-shadow: -15px -15px #64031B;
     border-radius: 5px;
 }
+
+.container-colaborador-meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    height: 65vh;
+    width: 30vw;
+    background: #961f3d;
+    box-shadow: -15px -15px #64031B;
+    border-radius: 5px;
+}
+
 
 .container-colaborador-azul {
     display: flex;
@@ -211,6 +227,34 @@ main {
     color: #FFFFFF;
 }
 
+.socialmedia1 {
+    padding: 1rem;
+}
+
+.socialmedia1 ul {
+
+    display: flex;
+    justify-content: center;
+    padding-left: 0.9rem;
+
+}
+
+.socialmedia1 li {
+
+    list-style-type: none;
+    margin-right: 0.5rem;
+
+}
+
+.socialmedia1 i {
+
+    font-size: xx-large;
+    color: #E3E6FF;
+    justify-content: space-between;
+
+}
+
+
 /*///// MOBILE ///////////////////*/
 
 @media (min-width: 300px) and (max-width: 750px) {
@@ -237,14 +281,14 @@ main {
         width: 100%;
     }
 
+.card1 p {
+    font-size: 32px;
+}
+
     .card2-info {
         width: 100%;
         font-size: 21px;
-        color: #1d1855;
-    }
-
-    .card2-info p {
-        text-align: justify;
+        text-align: start;
     }
 
     .borda {
@@ -263,8 +307,7 @@ main {
         order: 1;
         width: 100%;
         font-size: 21px;
-        text-align: justify;
-        color: #1d1855;
+        text-align: start;
     }
 
     .titulo-equipe {
@@ -273,22 +316,40 @@ main {
         order: 0;
     }
 
+.titulo-equipe p {
+    font-size: 32px;
+}
+
+    .gato {
+        width: 35%;
+    }
+
     .colaboradores-inicial {
+        width: 100%;
         flex-direction: column;
     }
 
     .container-colaborador {
-        height: 65vh;
+        height: 70vh;
         width: 85vw;
         margin: 3em;
     }
 
+    .container-colaborador-meio {
+        height: 70vh;
+        width: 100vw;
+       
+    }
+
+
     .colaboradores-meio {
         width: 100%;
+        margin: 0;
 
     }
 
     .colaboradores-final {
+        width: 100%;
         flex-direction: column;
         justify-content: center;
     }
@@ -326,8 +387,13 @@ main {
     .container-colaborador {
         height: 65vh;
         width: 40vw;
-        background: #961f3d;
     }
+
+    .container-colaborador-meio {
+        height: 65vh;
+        width: 40vw;
+    }
+
 
     .container-colaborador-azul {
         height: 65vh;
@@ -349,10 +415,14 @@ main {
 @media (min-width: 1000px) and (max-width: 1250px) {
     .container-colaborador {
         height: 65vh;
-        width: 40vw;
-        background: #961f3d;
+        width: 40vw;  
     }
 
+    .container-colaborador-meio {
+        height: 65vh;
+        width: 40vw;
+    }
+    
     .container-colaborador-azul {
         height: 65vh;
         width: 40vw;
