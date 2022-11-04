@@ -257,7 +257,122 @@ main {
 
 /*///// MOBILE ///////////////////*/
 
-@media (min-width: 300px) and (max-width: 750px) {
+@media (min-width: 150px) and (max-width: 319px) {
+    main {
+        height: 46vh;
+    }
+
+    .conheca {
+        font-size: 34px;
+    }
+
+    .debugrace {
+        font-size: 38px;
+    }
+
+    .container-quem-somos {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .card1 {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+.card1 p {
+    font-size: 26px;
+}
+
+    .card2-info {
+        width: 100%;
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .borda {
+        visibility: visible;
+        width: 90%;
+        margin-bottom: 1em;
+    }
+
+
+    .equipe {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .equipe-sobre {
+        order: 1;
+        width: 100%;
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .titulo-equipe {
+        width: 100%;
+        justify-content: flex-start;
+        order: 0;
+    }
+
+.titulo-equipe p {
+    font-size: 26px;
+}
+
+    .gato {
+        width: 30%;
+    }
+
+    .colaboradores-inicial {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-colaborador {
+        height: 80vh;
+        width: 90vw;
+        margin: 2em;
+    }
+
+    .container-colaborador-meio {
+        height: 80vh;
+        width: 100vw;
+       
+    }
+
+
+    .colaboradores-meio {
+        width: 100%;
+        margin: 0;
+
+    }
+
+    .colaboradores-final {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-colaborador-azul {
+        height: 65vh;
+        width: 85vw;
+        margin: 2em;
+    }
+
+    .info-mais {
+        height: 33vh;
+        width: 100%;
+        margin: 1rem;
+    }
+
+.info-mais-texto {
+    font-size: 14px;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
     main {
         height: 50vh;
     }

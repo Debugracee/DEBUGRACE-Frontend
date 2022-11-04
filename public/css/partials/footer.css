@@ -106,6 +106,16 @@ footer {
 
 }
 
+@media (min-width: 150px) and (max-width: 319px) {
+.footer-logo img {
+    width: 40vw;
+}
+.discord {
+    font-size: 10px;
+}
+
+}
+
 @media (min-width: 320px) and (max-width: 700px) {
     .footer-logo img {
         width: 25vw;
