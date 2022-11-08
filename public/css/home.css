@@ -181,8 +181,23 @@ body{
     
     .frase4{
         padding-bottom: 6rem;
+        margin-top: 60rem;
     }
     
+    .fraseC, .fraseD{
+        margin: 2rem;
+    }
+
+    #painel-Frases{
+        margin-top: -23rem;
+    }
+
+    #card-Conteudo, #card-Exercicio{
+        width: 50rem;
+        margin-bottom: 5rem;
+        margin-top: 12rem;
+    }
+
     .fraseE{
         width: 50rem;
         padding-right: 1rem;
@@ -197,20 +212,26 @@ body{
     .clique{
         padding: 9rem 2rem 5rem 1rem;
         width: 49rem;
+        margin-top: 6rem;
+        margin-bottom: 7rem;
     }
    
-    .cardC, .cardD{
-        width: 134vh;
-   }
-   
    .fraseBb{
-    padding: 7vh; 
+        padding: 7vh; 
    }
    
+   #ideiaDebugrace{
+        margin-top: 13rem;
+   }
+
    .objetivo{
         z-index: 100000;
    }
    
+   .fraseIncentivo{
+        margin-bottom: 8rem;
+   }
+
    .header2{
     display: flex;
     justify-content: center;

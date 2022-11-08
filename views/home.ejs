@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="css/home.css" rel="stylesheet"> 
         <link rel="stylesheet" href="css/partials/header1.css">
+        <link rel="stylesheet" href="css/partials/footer1.css">
         <title>Debugrace</title>
     </head>
 
@@ -73,28 +74,30 @@
                 <img class="w3-container w3-panel fraseA" src="img/frase3.svg" alt="Ser autodidata é uma necessidade">
              </div><br><br>
 
-             <div class="FraseBb w3-container w3-center">
-                <p class="aspas">"</p><p class="fraseB">Esse é o site que queriamos que tivesse quando <br>começamos a estudar por conta prórpia.</p><p class="aspas">"</p></p>
+             <div class="FraseBb w3-container w3-center" id="ideiaDebugrace">
+                <p class="aspas">"</p><p class="fraseB">Esse é o site que queriamos que tivesse quando <br>começamos a estudar por conta própria.</p><p class="aspas">"</p></p>
              </div>
 
              <section class="w3-container w3-center">
-                <div class="w3-half cardC">
+                <div class="w3-half cardC" id="card-Conteudo">
                     <h4 class="fraseC">Conteúdos de introdução e apronfundamento</h4>
                 </div>
-                <div class="w3-half cardD frasesCD">
+                <div class="w3-half cardD frasesCD" id="card-Exercicio">
                     <h4 class="fraseD">Preparamos exercicios e projetos para praticar <br> e melhorar sua lógica.</h4>
                 </div>
              </section><br>
 
-             <div class="w3-container w3-center">
-                <p class="aspas">"</p><p class="fraseE">Existem muitos recursos por aí, mas alguns são melhores que outros. <br>Você não precisa de mais uma lista de “200+ Cursos Online Gratuitos.</p><p class="aspas">"</p>
+             <div class="w3-container w3-center fraseIncentivo">
+                <p class="aspas">"</p>
+                <p class="fraseE">Existem muitos recursos por aí, mas alguns são melhores que outros. <br>Você não precisa de mais uma lista de “200+ Cursos Online Gratuitos.</p>
+                <p class="aspas">"</p>
              </div>
             </section>
             <!--PARTE TRES-->
 
             <!--PARTE QUATRO: RECURSOS-->
             <section>
-                <div class="w3-panel frase4A">
+                <div class="w3-panel frase4A" id="painel-Frases">
                     <img class="frase4 w3-center" src="img/frase4.svg"><br><br>
                 </div>
                 <div class="w3-container w3-center">
@@ -127,5 +130,9 @@
 
         </main>
         <script src="js/home.js"></script>
+
+        <footer>
+            <%- include('./partials/footer1') %>
+        </footer>
     </body>
 </html>
