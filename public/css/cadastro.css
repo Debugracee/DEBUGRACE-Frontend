@@ -192,49 +192,6 @@ form{
 
 }
 
-/* .container-name-group.error input {
-    border-color: red;
-
-}
-
-.container-name-group.error small {
-    visibility: visible;
-    color: red
-}
-
- .container-name-group.success input {
-    border-color: #2ecc71;
-}
-
-.container-gender-group.error input {
-    border-color: red;
-}
-
-.container-gender-group.error small {
-    visibility: hidden;
-    color: red;
-
-}
-
-.container-gender-group.success input {
-    border-color: #2ecc71;
-
-}
-
-.container-createpassword-group.error input {
-    border-color: red;
-}
-
-.container-createpassword-group.error small {
-    visibility: visible;
-    color: red
-}
-
-.container-createpassword-group.success input {
-    border-color: #2ecc71;
-
-} */
-
 footer {
 
     background-color: #1C256D;
@@ -397,6 +354,11 @@ footer {
         justify-content: center;
         margin: 0;
     }
+
+   #check {
+    width: 60%;
+   }
+    
 
 }
 @media only screen and (max-width: 376px) {
