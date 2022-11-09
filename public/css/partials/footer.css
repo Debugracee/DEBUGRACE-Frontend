@@ -11,6 +11,7 @@
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: center;
     justify-content: center;
     background-color: #1C256D;
     font-family: 'Cairo', sans-serif;
@@ -47,6 +48,12 @@ footer {
     justify-content: center;
 }
 
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .socialmedia ul {
 
     display: flex;
@@ -74,6 +81,7 @@ footer {
 
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
 
 }

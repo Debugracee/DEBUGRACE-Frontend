@@ -13,6 +13,7 @@ body {
   color: #ffffff;
   box-shadow: 0 0 1em #1c256d9a;
 }
+
 /*
 .container{
 
@@ -23,18 +24,22 @@ body {
 .col {
   margin: 0;
 }
+
 .config {
   text-decoration: none;
 }
+
 .titulo {
   height: 25px;
   padding-left: 41%;
   text-align: start;
 }
+
 .text {
   text-align: center;
   padding-top: 10%;
 }
+
 .user {
   text-decoration: none;
   margin: 0;
@@ -46,16 +51,19 @@ body {
   height: 200px;
   justify-content: right;
 }
+
 form {
   width: 65%;
-  margin-left: 25%;
+  margin-left: 15%;
   font-family: Cairo;
   margin-bottom: 3%;
 }
+
 form label {
   color: #0d0c61;
   position: absolute;
 }
+
 form input {
   background-color: #ced8eb;
   border-radius: 5px;
@@ -64,6 +72,7 @@ form input {
   width: 550px;
   height: 45px;
 }
+
 .editar {
   cursor: pointer;
   width: 15%;
@@ -73,8 +82,9 @@ form input {
   background-color: #1c256d;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 0 25px;
+  margin: 1rem 0;
 }
+
 form small {
   margin-bottom: 1rem;
   position: absolute;
@@ -82,9 +92,11 @@ form small {
   left: 0;
   visibility: hidden;
 }
+
 .confirma {
   padding: 0%;
 }
+
 .check-button {
   cursor: pointer;
   width: 35%;
@@ -95,6 +107,7 @@ form small {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .delete {
   width: 55%;
   height: 65px;
@@ -192,150 +205,406 @@ form small {
   display: flex;
 }
 
-@media only screen and (max-width: 1255px) {
+@media (min-width: 914px) and (max-width: 1255px) {
   header {
     width: auto;
   }
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10.3rem;
 }
-@media only screen and (max-width: 768px) {
-  header {
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .editar {
+    margin: 1rem 0;
+    padding: 0 1.2rem;
+    width: 20vw;
+    height: 4vh;
+  }
+
+  .check-button {
+    text-align: center;
+    height: 6vh;
+    width: 36vw;
+
+  }
+
+.confirma {
+  margin-top: 1rem;
+  margin-left: 6rem;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+#btnDelete {
+  width: 100%;
+}
+
+  .delete {
     width: 100%;
   }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 914px) {
+  header {
+    width: auto;
+  }
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10.3rem;
+}
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+
+  .confirma {
+    margin-top: 1rem;
+    margin-left: 6rem;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+  
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .editar {
+    margin: 1rem 0;
+    padding: 0 1.2rem;
+    width: 24vw;
+    height: 4vh;
+  }
+
+  .check-button {
+    text-align: center;
+    height: 6vh;
+    width: 45vw;
+
+  }
+
+
+}
+
+@media (min-width: 671px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+
   .titulo {
     padding-left: 31%;
   }
+
   .text {
     width: 85%;
   }
+
   .configlogo {
     padding-left: 15%;
     height: 150px;
   }
+
   form {
     width: 80%;
     margin-right: 25%;
     margin: 0 15%;
   }
+
   form input {
     width: 450px;
   }
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
   .editar {
-    width: 25%;
+    margin: 1rem 0;
+    padding: 0 1.2rem;
+    width: 24vw;
+    height: 4vh;
   }
+
+  .check-button {
+    text-align: center;
+    height: 5vh;
+    width: 45vw;
+  }
+
 }
-@media only screen and (max-width: 670px) {
-  header {
-    width: 100%;
+
+@media (min-width:477px) and (max-width: 670px) {
+  .header {
+    height: 20vh;
   }
+
   .text {
     width: 85%;
     height: 35px;
     text-align: start;
+   margin: 0 3rem;
   }
+
+  .configlogo {
+    display: none;
+  }
+
   form {
     width: 85%;
     margin-right: 20%;
   }
+
   form input {
     width: 350px;
   }
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
   .editar {
-    width: 25%;
+    margin: 1rem 0;
+    padding: 0 1.2rem;
+    width: 24vw;
+    height: 3vh;
   }
+
   .check-button {
-    width: 45%;
+    text-align: center;
+    height: 5vh;
+    width: 45vw;
+
   }
+
   .delete {
     width: 65%;
     height: 75px;
   }
 }
-@media only screen and (max-width: 476px) {
-  header {
-    width: 100%;
+
+@media (min-width: 377px) and (max-width: 476px) {
+  .header {
+    width: 70vh;
   }
+
   .titulo {
     padding-left: 15%;
     height: 20px;
   }
+
   .user {
     padding: 0;
   }
+
   .text {
-    width: 75%;
-    height: 15px;
+    width: 100%;
+    height: 10rem;
     text-align: start;
   }
+
   .configlogo {
-    height: 130px;
+    display: none;
   }
+
   form {
     width: 85%;
     margin-right: 20%;
     margin: 0 15%;
   }
+
   form input {
     width: 300px;
     height: 40px;
   }
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
   .editar {
-    width: 20%;
-    height: 40px;
+    margin: 1rem 0;
+    padding: 0 1.2rem;
+    width: 24vw;
+    height: 3vh;
   }
+
   .check-button {
-    width: 50%;
-    height: 55px;
+    text-align: center;
+    height: 5vh;
+    width: 45vw;
+
   }
+
   .delete {
     width: 65%;
     height: 75px;
   }
 }
-@media only screen and (max-width: 376px) {
+
+@media (min-width:321px) and (max-width: 376px) {
   * {
     font-size: small;
   }
+
   body {
     padding: 0;
     margin: 0;
     width: 100%;
   }
-  header {
-    width: 100%;
+
+  .header {
+    width: 60vh;
   }
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .text {
     width: 55%;
-    font-size: 135%;
+    font-size: 25px;
     text-align: start;
   }
+
   .configlogo {
-    height: 100px;
+    display: none;
   }
+
   form {
     width: 75%;
   }
+
   form input {
     width: 60%;
     height: 30px;
   }
-  .editar {
-    width: 21%;
-    height: 85%;
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
   }
+
+  .container-editar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .editar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+    padding: 0rem;
+    height: 2.8vh;
+    width: 26vw;
+  }
+
   .check-button {
     text-align: center;
+    height: 5vh;
+    width: 45vw;
+
   }
+
   .delete {
     text-align: center;
   }
 }
-@media only screen and (max-width: 320px) {
+
+@media (min-width: 50px) and (max-width: 320px) {
   header {
     width: 100%;
   }
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+  .container-editar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .editar {
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    width: 24vw;
+    margin: 0.5rem 0;
+    padding: 0 1.1rem;
+  }
+
+  .check-button {
+    height: 4vh;
+    width: 40vw;
+  }
+
   form {
     width: 70%;
   }
+
   form input {
     width: 55%;
     height: 30px;
