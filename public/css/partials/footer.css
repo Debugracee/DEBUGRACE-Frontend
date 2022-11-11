@@ -8,6 +8,7 @@
 }
 
 .discord {
+    box-sizing: border-box;
     display: flex;
     margin: 0;
     padding: 0;
@@ -36,7 +37,7 @@
 }
 
 footer {
-
+    box-sizing: border-box;
     background-color: #1C256D;
     font-family: 'Courier Prime';
 

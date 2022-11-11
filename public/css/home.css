@@ -4,66 +4,78 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #9ea6c1ad;
 }
 
 /*PRIMEIRO-HEADER*/
-.nav{
+.nav {
     margin-top: 3vh;
 }
 
 /*SEGUNDO-HEADER*/
-.header2{
+.header2 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
-.cabecalho{
+
+.cabecalho {
     background-color: #1C256D;
     padding-top: 2rem;
     box-shadow: 0 0 1em #1c256d9a;
 }
 
-.cab-frase{
-    order: 1;
-}
-
-.cab-imagem{
-    order: 0;
-}
-
-.autodidata{
-    margin-left: 2rem;
-    margin-bottom: 5rem;
-}
-
-.frase{
-    width: 35rem;
-    margin-left: 8vh;
-    margin-top: 2rem;
-    margin-bottom: 1vh;
-    margin-right: 16vh;
-}
-
-#ideiaDebugrace{
+.frase-principal {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
     margin-bottom: 7rem;
 }
 
-.frase2{
+.cab-frase {
+    order: 1;
+}
+
+.cab-imagem {
+    order: 0;
+}
+
+#listaGuias {
+    display: flex;
+
+}
+
+.autodidata {
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+#ideiaDebugrace {
+    margin-bottom: 7rem;
+}
+
+.frase2 {
     font-family: 'Cairo', sans-serif;
     color: #FFF2E7;
     font-size: 1.3rem;
 }
 
-.imagem {width: 33rem; margin-left: 0rem;}
+.imagem {
+    width: 33rem;
+    margin-left: 0rem;
+}
+
 /*SEGUNDO-HEADER*/
 
 /*MOSTRANDO OS GUIAS DE ESTUDOS*/
-.guia, .guia1, .titulo{
+.guia,
+.guia1,
+.titulo {
     font-family: 'Cairo', sans-serif;
     font-weight: bold;
     font-size: 2.3rem;
@@ -71,50 +83,82 @@ body{
     text-decoration: none;
 }
 
-.guia1{font-size: 2.2rem;}
-
-.guiasEstudos{
-    background-color: #F4F8FF;
-    border: 0.2rem solid #19235f;
-    margin: 5rem 5rem 5rem 5rem;
-    box-shadow: 0 0 1rem rgb(119, 126, 145);
-    transform:scale(1.10,1.10);
+.guia1 {
+    font-size: 2.2rem;
 }
 
-.imguia{
+.guiasEstudos {
+    background-color: #F4F8FF;
+    border: 0.2rem solid #19235f;
+    margin: 5rem;
+    box-shadow: 0 0 1rem rgb(119, 126, 145);
+    transform: scale(1.10, 1.10);
+}
+
+.imguia {
     display: flex;
     justify-content: center;
     width: 10rem;
 }
 
-.h4{
+.h4 {
     cursor: pointer;
 }
 
-.h4:hover{color: #5965bd;}
+.h4:hover {
+    color: #5965bd;
+}
+
 /*MOSTARNDO OS GUIAS DE ESTUDOS*/
 
 /*PARTE: SER AUTODIDATA É UMA NECESSIDADE*/
-.clique{
-    margin-bottom: 7rem;
-    max-width: 58rem;
-    margin-left: 13rem;
+.clique {
+    margin: 0 auto;
+    width: 70%;
 }
 
-.fraseA{width: 40rem;margin-left: 4rem;}
+.clique-info {
+    color: #070d83;
+}
 
-.fraseB, .fraseE, .aspas, .fraseCard, .aspasCard{
+.clique-info .fraseA {
+    width: 40rem;
+    margin-left: 4rem;
+}
+
+.frase-autodidata {
+    color: #282173;
+    font-weight: 600;
+}
+
+.fraseB,
+.fraseE,
+.aspas,
+.fraseCard,
+.aspasCard {
     font-family: 'Cairo', sans-serif;
     font-size: 1.9rem;
     font-weight: bold;
-    
+
 }
 
-.fraseB{color: #213373;}
-.fraseE{color: #FFF2E7; position: relative;z-index: 3000;}
-.aspas{color: #AD2647; position: relative;z-index: 3000;}
+.fraseB {
+    color: #213373;
+}
 
-.fraseC{
+.fraseE {
+    color: #FFF2E7;
+    position: relative;
+    z-index: 3000;
+}
+
+.aspas {
+    color: #AD2647;
+    position: relative;
+    z-index: 3000;
+}
+
+.fraseC {
     background-color: #404A9B;
     padding-bottom: 5rem;
     box-shadow: -15px -15px #10195f;
@@ -122,139 +166,302 @@ body{
     z-index: 2000;
 }
 
-.fraseD{
+.fraseD {
     background-color: #AD2647;
     padding-bottom: 3.5rem;
     box-shadow: -15px -15px #64031B;
 }
 
-.fraseC, .fraseD{
+
+.fraseC,
+.fraseD {
+    display: flex;
+    align-items: center;
     font-family: 'Cairo', sans-serif;
     color: #FFFFFF;
     font-weight: bold;
-    margin: 6rem 8rem 6rem 8rem;
+    margin: 6rem;
     padding-top: 5rem;
     position: relative;
-    z-index: 3;  
-    border-radius: 5px; 
+    z-index: 3;
+    border-radius: 5px;
 }
+
+
+
 /*PARTE: SER AUTODIDATA É UMA NECESSIDADE*/
 
 /*PARTE: RECURSOS*/
-.frase4A{background-color: #1C256D; position: relative; bottom: 30rem;}
-.frase4{width: 40rem; margin-top: 40rem; margin-bottom: 1rem; margin-left: 4rem;}
+.frase4A {
+    background-color: #1C256D;
+    position: relative;
+    bottom: 30rem;
+}
 
-.card1, .card2{
-   color: #F4F8FF;
-   padding-top: 3rem;
-   padding-bottom: 3rem;
-   font-family: 'Cairo', sans-serif;
-   position: relative;
-   bottom: 28rem;
-   border-radius: 5rem;
+.frase4 {
+    width: 40rem;
+    margin-top: 40rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.card1,
+.card2 {
+    color: #F4F8FF;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+    bottom: 28rem;
+    border-radius: 5rem;
 
 }
 
-.cards1, .cards2{
+.cards1,
+.cards2 {
     margin: 2rem 8rem 2rem 8rem;
 }
 
-.card1{background-color: #1C256D; box-shadow: -15px -15px #151c52b1;}
-
-.card2{background-color: #9c2a47; box-shadow: -15px -15px #7a2036ba;}
-
-.fraseCard, .aspasCard{
-    position: relative;
-    bottom:28rem;
+.card1 {
+    background-color: #1C256D;
+    box-shadow: -15px -15px #151c52b1;
 }
 
-.aspasCard{color: #AD2647;}
-.fraseCard{color: #213373;}
+.card2 {
+    background-color: #9c2a47;
+    box-shadow: -15px -15px #7a2036ba;
+}
+
+.fraseCard,
+.aspasCard {
+    position: relative;
+    bottom: 28rem;
+}
+
+.aspasCard {
+    color: #AD2647;
+}
+
+.fraseCard {
+    color: #213373;
+}
+
 /*PARTE: RECURSOS*/
 
+
+.cards-all {
+    margin-top: -23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 3rem;
+}
+
+.cards-firt {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-last {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-blue {
+    width: 40vw;
+    height: 30vh;
+    box-shadow: -15px -15px #0d144a;
+    background-color: #1C256D;
+    margin: 2rem;
+    opacity: 1;
+}
+
+.card-blue-title,
+.card-blue-info,
+.card-red-title,
+.card-red-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+.card-red {
+    width: 40vw;
+    height: 30vh;
+    box-shadow: -15px -15px #64031B;
+    background-color: #AD2647;
+    margin: 2rem;
+}
+
+@media (min-width: 769px) and (max-width: 950px) {
+    .frase-principal {
+        padding-left: 3rem;
+    }
+
+    .imagem {
+        display: none;
+    }
+}
+
 /*PARTE: TORNANDO ELA RESPONSIVA*/
-@media(max-width: 768px){
-    .imagem{
+@media(max-width: 768px) {
+
+    .frase-principal {
+        padding-top: 3rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .imagem {
         display: none;
     }
-    .nav{
-        display: none;
+
+    .nav {
+        display: flex;
+
     }
-    .navbar-brand{
+
+    .guiasEstudos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-brand {
         padding-top: 2.1rem;
         padding-bottom: 2.1rem;
     }
-    .frase{
-        width: 34rem;
-        margin-left: 5rem;
-        margin-top: 2rem;
-    }
-    
-    .frase2{
+
+    .frase2 {
+        margin-top: 4rem;
         text-align: center;
     }
-    
-    .frase4{
-        padding-bottom: 6rem;
-        margin-top: 60rem;
-    }
-    
-    .fraseC, .fraseD{
-        margin: 2rem;
+
+
+    .card-conteudo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #painel-Frases{
+    .fraseC,
+    .fraseD {
+        width: 100%;
+        margin: 1rem;
+        box-shadow: none;
+    }
+
+    #painel-Frases {
         margin-top: -23rem;
     }
 
-    #card-Conteudo, #card-Exercicio{
-        width: 50rem;
+    #card-Conteudo,
+    #card-Exercicio {
+        display: flex;
+        align-items: center;
+        width: 30rem;
         margin-bottom: 5rem;
-        margin-top: 12rem;
     }
 
-    .fraseE{
+    .fraseE {
         width: 50rem;
         padding-right: 1rem;
         font-size: 1.6rem;
     }
-    
-    .guiasEstudos{
-        margin: 6rem 9rem 1rem 13rem;
-        padding: 2rem 2rem 2rem 2rem;
-    }
-    
-    .clique{
-        padding: 9rem 2rem 5rem 1rem;
-        width: 49rem;
-        margin-top: 6rem;
-        margin-bottom: 7rem;
-    }
-   
-   .fraseBb{
-        padding: 7vh; 
-   }
-   
-   #ideiaDebugrace{
-        margin-top: 13rem;
-   }
 
-   .objetivo{
+
+    .clique {
+        width: 100%;
+    }
+
+    .fraseIncentivo {
+        width: 100%;
+    }
+
+    #painel-frases img {
+        display: none;
+    }
+
+    .frase4 {
+        width: 30rem;
+        margin-top: 60rem;
+    }
+
+    .fraseE {
+        width: 100%;
+    }
+
+    .frase-autodidata {
+        margin: 0;
+        padding: 2rem;
+        color: #282173;
+        font-weight: 600;
+    }
+
+    .clique-info {
+        font-size: 20px;
+    }
+
+    .fraseBb {
+        padding: 7vh;
+    }
+
+    #ideiaDebugrace {
+        margin-top: 2rem;
+    }
+
+    .objetivo {
         z-index: 100000;
-   }
-   
-   .fraseIncentivo{
-        margin-bottom: 8rem;
-   }
-
-   .header2{
-    display: flex;
-    justify-content: center;
-   }
-
-   #listaGuias{
-    margin-right: 5vh;
-    margin-left: -7vh;
     }
-    
+
+    .fraseIncentivo {
+        margin-bottom: 4rem;
+    }
+
+    .header2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards-all {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        gap: 3rem;
+    }
+
+    .cards-firt {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-last {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-blue {
+        width: 70vw;
+        height: 50vh;
+        margin: 2rem;
+        opacity: 1;
+    }
+
+
+
+
+    .card-red {
+        width: 70vw;
+        height: 50vh;
+        box-shadow: -15px -15px #64031B;
+        background-color: #AD2647;
+        margin: 2rem;
+    }
+
+
+
 }
