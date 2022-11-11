@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="css/home.css" rel="stylesheet"> 
         <link rel="stylesheet" href="css/partials/header1.css">
-        <link type="text/css" href="css/partials/footer1.css">
+        
         <title>Debugrace</title>
     </head>
 
@@ -48,7 +48,7 @@
                     <script src="js/homeCards.js"></script>
                     <section id="listaGuias" class="row" >
                         <div class="col guias cards guiasEstudos"><br>
-                          <div class="row card produto cartao " style="background-color: #F4F8FF; align-items: center; border: none;">
+                          <div class="row card produto cartao" style="background-color: #F4F8FF; align-items: center; border: none;">
                             <img id="javascript" src="" class="card-img-top imguia" alt="">
                             <div class="card-body">
                               <h3 class="card-title title-body-javascript titulo" style="text-align: center;"></h3>
@@ -70,12 +70,14 @@
             
              <!--PARTE TRES-->
              <section>
-             <div>
+             <div class="autodidata">
                 <img class="w3-container w3-panel fraseA" src="img/frase3.svg" alt="Ser autodidata é uma necessidade">
              </div><br><br>
 
              <div class="FraseBb w3-container w3-center" id="ideiaDebugrace">
-                <p class="aspas">"</p><p class="fraseB">Esse é o site que queriamos que tivesse quando <br>começamos a estudar por conta própria.</p><p class="aspas">"</p></p>
+                <p class="aspas">"</p>
+                <p class="fraseB">Esse é o site que queriamos que tivesse quando <br>começamos a estudar por conta própria.</p>
+                <p class="aspas">"</p>
              </div>
 
              <section class="w3-container w3-center">
@@ -101,12 +103,14 @@
                     <img class="frase4 w3-center" src="img/frase4.svg"><br><br>
                 </div>
                 <div class="w3-container w3-center">
-                    <p class="aspasCard">"</p><p class="fraseCard">Ser autodidata é ter a incapacidade de conviver com a dúvida.</p><p class="aspasCard">"</p></p>
+                    <p class="aspasCard">"</p>
+                    <p class="fraseCard">Ser autodidata é ter a incapacidade de conviver com a dúvida.</p>
+                    <p class="aspasCard">"</p>
                  </div>
 
             </section>
-            <div class="CARDS">
-                <section class="cards1">
+            <!-- <div class="CARDS">
+               
                     <div class="w3-container w3-half w3-center card1">
                         <h3 style="font-family: 'Cairo', sans-serif;">Ser autodidata</h3>
                         <p>É ter a capacidade de aprender um conteúdo de forma autônoma, ou seja, administrando seu próprio processo de estudo, basicamente, é o ato de estudar e adquirir conhecimentos por si mesmo.</p>
@@ -115,9 +119,9 @@
                         <h3 style="font-family: 'Cairo', sans-serif;">Guia de estudos</h3>
                         <p>Ele servirá para dar um norte para as pessoas que não sabem por onde começar ou como continuar.  Onde compartilhamos conteúdos que também utilizamos e propomos exercícios para praticar sua lógica.</p>
                     </div><br></br><br>
-                </section>
+                
 
-            <section class="cards2">
+            
                 <div class="w3-container w3-half w3-center card2">
                     <h3 style="font-family: 'Cairo', sans-serif;">Discord</h3>
                     <p>É ter a capacidade de aprender um conteúdo de forma autônoma, ou seja, administrando seu próprio processo de estudo, basicamente, é o ato de estudar e adquirir conhecimentos por si mesmo.</p>
@@ -126,12 +130,9 @@
                     <h3 style="font-family: 'Cairo', sans-serif;">Não somos uma lista de cursos</h3>
                     <p>Nosso objetivo é compartilhar materiais que usamos nos nossos estudos, como cursos do YT, PDF's, sites para praticar. Não iremos te dar uma lista com vários cursos gratuitos pra você ficar perdido.</p>
                 </div>
-            </section>
-
+            </div> -->
         </main>
-
-        <%- include('./partials/footer1') %>
-
+            <%- include('./partials/footer1') %>
         <script src="js/home.js"></script>
     </body>
 </html>
