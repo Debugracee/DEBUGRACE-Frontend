@@ -205,33 +205,6 @@ body {
     margin-left: 2rem;
 }
 
-.card1,
-.card2 {
-    color: #F4F8FF;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    font-family: 'Cairo', sans-serif;
-    position: relative;
-    bottom: 28rem;
-    border-radius: 5rem;
-
-}
-
-.cards1,
-.cards2 {
-    margin: 2rem 8rem 2rem 8rem;
-}
-
-.card1 {
-    background-color: #1C256D;
-    box-shadow: -15px -15px #151c52b1;
-}
-
-.card2 {
-    background-color: #9c2a47;
-    box-shadow: -15px -15px #7a2036ba;
-}
-
 .fraseCard,
 .aspasCard {
     position: relative;
@@ -274,7 +247,6 @@ body {
     box-shadow: -15px -15px #0d144a;
     background-color: #1C256D;
     margin: 2rem;
-    opacity: 1;
 }
 
 .card-blue-title,
@@ -381,10 +353,6 @@ body {
         width: 100%;
     }
 
-    #painel-frases img {
-        display: none;
-    }
-
     .frase4 {
         width: 30rem;
         margin-top: 60rem;
@@ -448,7 +416,6 @@ body {
         width: 70vw;
         height: 50vh;
         margin: 2rem;
-        opacity: 1;
     }
 
 
@@ -461,7 +428,4 @@ body {
         background-color: #AD2647;
         margin: 2rem;
     }
-
-
-
 }
