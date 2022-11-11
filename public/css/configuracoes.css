@@ -83,6 +83,12 @@ form input {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 1rem 0;
+  transition: 0.2s;
+}
+
+.editar:hover {
+  transition: 0.2s;
+  background-color: #141a4c;
 }
 
 form small {
@@ -103,9 +109,16 @@ form small {
   height: 65px;
   border-radius: 10px;
   color: #ffffff;
-  background-color: #753354;
+  background-color: #ab3956;
+  transition: 0.2s;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.check-button:hover {
+  transition: 0.2s;
+  background-color: #b31a40;
+  color: rgb(228, 236, 252);
 }
 
 .delete {
@@ -210,13 +223,13 @@ form small {
     width: auto;
   }
 
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10.3rem;
-}
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10.3rem;
+  }
 
   #nome,
   #email,
@@ -245,17 +258,17 @@ form small {
 
   }
 
-.confirma {
-  margin-top: 1rem;
-  margin-left: 6rem;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-}
+  .confirma {
+    margin-top: 1rem;
+    margin-left: 6rem;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
 
-#btnDelete {
-  width: 100%;
-}
+  #btnDelete {
+    width: 100%;
+  }
 
   .delete {
     width: 100%;
@@ -269,13 +282,13 @@ form small {
     width: auto;
   }
 
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10.3rem;
-}
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10.3rem;
+  }
 
   #nome,
   #email,
@@ -291,7 +304,7 @@ form small {
     justify-content: center;
     width: 80%;
   }
-  
+
 
   .container-editar {
     display: flex;
@@ -381,7 +394,7 @@ form small {
     width: 85%;
     height: 35px;
     text-align: start;
-   margin: 0 3rem;
+    margin: 0 3rem;
   }
 
   .configlogo {
@@ -432,7 +445,7 @@ form small {
 
 @media (min-width: 377px) and (max-width: 476px) {
   .header {
-    width: 70vh;
+    width: 100vw;
   }
 
   .titulo {
@@ -580,6 +593,16 @@ form small {
   #email,
   #password {
     width: 70vw;
+  }
+
+  .configlogo {
+    display: none;
+  }
+
+  .text {
+    width: 55%;
+    font-size: 25px;
+    text-align: start;
   }
 
   .container-editar {
