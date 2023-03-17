@@ -1,6 +1,6 @@
 # DEBUGRACE-Frontend
 
-Aqui fica a parte do desenvolvimento Front-End da Debugrace.
+Aqui fica a parte do desenvolvimento Front-End da Debugrace, utilizando HTML, CSS, EJS e JavaScript.
 
 <h3>Sobre a Debugrace </h3>
 
